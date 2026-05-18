@@ -56,7 +56,7 @@ export function Footer() {
             ))}
           </div>
           <p className="mt-6 text-xs text-primary-foreground/60">
-            ISO 27001 Certified · TRAI Compliant
+            Built in New Delhi
           </p>
         </div>
       </div>
