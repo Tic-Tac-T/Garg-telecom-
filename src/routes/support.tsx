@@ -26,16 +26,16 @@ export const Route = createFileRoute("/support")({
 });
 
 const channels = [
-  { icon: Headphones, title: "Call NOC", desc: "Live engineer in under 60 seconds.", value: "+91 98110 24593" },
-  { icon: MessageSquare, title: "Email", desc: "Tracked tickets with priority routing.", value: "support@gargtelecom.in" },
-  { icon: FileText, title: "Knowledge Base", desc: "Setup guides, FAQs, and runbooks.", value: "Browse articles" },
+  { icon: Headphones, title: "Call Support", desc: "Speak with a real person, not a bot.", value: "+91 98110 24593" },
+  { icon: MessageSquare, title: "Email", desc: "We reply within a few hours on business days.", value: "support@gargtelecom.in" },
+  { icon: FileText, title: "Help Articles", desc: "Setup guides and answers to common questions.", value: "Browse articles" },
 ];
 
 const faqs = [
-  { q: "What is your standard uptime SLA?", a: "All enterprise contracts include a 99.9% uptime SLA with service credits." },
-  { q: "How fast can you provision a new circuit?", a: "Most metro fiber circuits are live within 7–14 business days after site survey." },
-  { q: "Do you offer static IPs?", a: "Yes — single static IPs are included on business plans, and /29 to /28 blocks are available on request." },
-  { q: "Is there a dedicated account manager?", a: "Every enterprise customer is paired with a named account manager and a backup engineer." },
+  { q: "What are your support hours?", a: "Phone support runs from 9am to 9pm, Monday to Saturday. Email tickets are monitored daily." },
+  { q: "How long does a new connection take?", a: "Most installations in our service areas are completed within 3–7 working days after a site survey." },
+  { q: "Do you offer static IPs?", a: "Yes — a single static IP can be added to most business plans on request." },
+  { q: "Will I get a dedicated point of contact?", a: "Business customers are assigned a named contact who handles their account end to end." },
 ];
 
 function SupportPage() {
@@ -45,7 +45,7 @@ function SupportPage() {
         <div className="container mx-auto px-4 text-center lg:px-8">
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">Support</h1>
           <p className="mx-auto mt-4 max-w-2xl text-primary-foreground/80">
-            Our NOC is staffed 24 / 7 / 365 by in-house engineers — never outsourced.
+            Get help from real people who know your account.
           </p>
         </div>
       </section>
