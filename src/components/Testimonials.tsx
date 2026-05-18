@@ -7,21 +7,21 @@ const logos = [
 const reviews = [
   {
     quote:
-      "Garg Telecom transitioned our 40-branch network to managed SD-WAN in under three weeks. Zero downtime since.",
+      "Switched our office to Garg Telecom last quarter. Installation was clean and the line has been steady.",
     name: "Rajiv Mehta",
-    role: "CIO, Northwind Industries",
+    role: "Operations Lead, Northwind Traders",
   },
   {
     quote:
-      "Their NOC team flagged and resolved a peering issue before our monitoring even alerted. That's real partnership.",
+      "What I appreciate most is that someone actually picks up the phone when there's an issue.",
     name: "Priya Sharma",
-    role: "Head of Infrastructure, Axiom Labs",
+    role: "Admin Manager, Axiom Studio",
   },
   {
     quote:
-      "Predictable pricing, gigabit symmetric, and engineers who actually pick up the phone. Best telecom partner we've had.",
+      "Straightforward pricing and a fair plan for our small team. No surprises on the invoice.",
     name: "Anand Kapoor",
-    role: "Founder, Vertex Software",
+    role: "Founder, Vertex Co.",
   },
 ];
 

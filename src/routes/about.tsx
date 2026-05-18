@@ -52,10 +52,9 @@ function AboutPage() {
               subtitle="Garg Telecom started in Karol Bagh with a simple idea — give homes and small businesses connectivity that just works, and a real person to call when it doesn't."
             />
             <p className="mt-6 text-muted-foreground">
-              Our mission is simple: deliver connectivity that disappears into the
-              background, so our customers can focus on the work that matters. We
-              invest in our own fiber, our own NOC, and our own engineers — no
-              outsourcing, no finger-pointing.
+              We're a small team — engineers, support folks, and on-ground
+              technicians — focused on doing the basics well: clean installs,
+              honest plans, and quick fixes when something goes wrong.
             </p>
           </div>
         </div>
