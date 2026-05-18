@@ -48,8 +48,8 @@ function AboutPage() {
             <SectionHeading
               center={false}
               eyebrow="Our story"
-              title="A network built by engineers, for businesses"
-              subtitle="What began as a small ISP serving Karol Bagh has grown into a national-grade telecom operator. We still answer the phone, and we still earn every contract."
+              title="A small team building a better local ISP"
+              subtitle="Garg Telecom started in Karol Bagh with a simple idea — give homes and small businesses connectivity that just works, and a real person to call when it doesn't."
             />
             <p className="mt-6 text-muted-foreground">
               Our mission is simple: deliver connectivity that disappears into the

@@ -54,8 +54,8 @@ function Index() {
       <section className="bg-background pt-20">
         <div className="container mx-auto px-4 lg:px-8">
           <SectionHeading
-            eyebrow="Trusted by"
-            title="500+ enterprises across India rely on us"
+            eyebrow="Early customers"
+            title="A few words from the businesses we work with"
           />
         </div>
         <div className="mt-12">
