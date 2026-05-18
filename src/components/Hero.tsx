@@ -15,8 +15,8 @@ export function Hero() {
       <div className="container relative mx-auto grid gap-12 px-4 py-20 lg:grid-cols-2 lg:gap-8 lg:px-8 lg:py-28">
         <div className="flex flex-col justify-center">
           <div className="inline-flex w-fit items-center gap-2 rounded-full border border-white/20 bg-white/5 px-3 py-1 text-xs font-medium backdrop-blur">
-            <span className="h-2 w-2 animate-pulse rounded-full bg-accent" />
-            Now expanding 10G fiber across North India
+            <span className="h-2 w-2 rounded-full bg-accent" />
+            Based in New Delhi
           </div>
           <h1 className="mt-6 text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
             Empowering Connections.{" "}
@@ -47,10 +47,10 @@ export function Hero() {
           </div>
           <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-primary-foreground/70">
             <span className="flex items-center gap-2">
-              <ShieldCheck className="h-4 w-4 text-accent" /> 99.9% Uptime SLA
+              <ShieldCheck className="h-4 w-4 text-accent" /> Reliable uptime
             </span>
-            <span>500+ Enterprise Clients</span>
-            <span>24/7 NOC Support</span>
+            <span>Responsive support</span>
+            <span>Transparent pricing</span>
           </div>
         </div>
 
