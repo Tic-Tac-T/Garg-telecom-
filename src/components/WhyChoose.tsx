@@ -1,10 +1,10 @@
 import { ShieldCheck, Headphones, Cable, TrendingUp } from "lucide-react";
 
 const items = [
-  { icon: ShieldCheck, title: "99.9% Uptime Guarantee", desc: "Backed by a financially-binding SLA across all enterprise tiers." },
-  { icon: Headphones, title: "24/7 Dedicated Support", desc: "In-house NOC engineers reachable in under 60 seconds." },
-  { icon: Cable, title: "Next-Gen Fiber Infrastructure", desc: "10G-PON ready backbone with redundant national routing." },
-  { icon: TrendingUp, title: "Scalable Business Solutions", desc: "From 10 Mbps to 100 Gbps — upgrade without re-architecting." },
+  { icon: ShieldCheck, title: "Reliable Connectivity", desc: "Stable links with proactive monitoring so issues are caught early." },
+  { icon: Headphones, title: "Responsive Support", desc: "Talk to a real engineer — no long queues, no scripted replies." },
+  { icon: Cable, title: "Modern Fiber Setup", desc: "Clean installations using current-gen fiber and routing hardware." },
+  { icon: TrendingUp, title: "Plans That Scale", desc: "Start small and upgrade your bandwidth as your business grows." },
 ];
 
 export function WhyChoose() {

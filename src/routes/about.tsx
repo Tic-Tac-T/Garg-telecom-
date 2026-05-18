@@ -18,10 +18,10 @@ export const Route = createFileRoute("/about")({
 });
 
 const stats = [
-  { value: "500+", label: "Enterprise customers" },
-  { value: "12", label: "Cities live" },
-  { value: "8 Tbps", label: "Backbone capacity" },
-  { value: "99.9%", label: "Network uptime" },
+  { value: "2024", label: "Founded in New Delhi" },
+  { value: "Karol Bagh", label: "Head office" },
+  { value: "In-house", label: "Support team" },
+  { value: "Growing", label: "Customer base" },
 ];
 
 function AboutPage() {
@@ -48,14 +48,13 @@ function AboutPage() {
             <SectionHeading
               center={false}
               eyebrow="Our story"
-              title="A network built by engineers, for businesses"
-              subtitle="What began as a small ISP serving Karol Bagh has grown into a national-grade telecom operator. We still answer the phone, and we still earn every contract."
+              title="A small team building a better local ISP"
+              subtitle="Garg Telecom started in Karol Bagh with a simple idea — give homes and small businesses connectivity that just works, and a real person to call when it doesn't."
             />
             <p className="mt-6 text-muted-foreground">
-              Our mission is simple: deliver connectivity that disappears into the
-              background, so our customers can focus on the work that matters. We
-              invest in our own fiber, our own NOC, and our own engineers — no
-              outsourcing, no finger-pointing.
+              We're a small team — engineers, support folks, and on-ground
+              technicians — focused on doing the basics well: clean installs,
+              honest plans, and quick fixes when something goes wrong.
             </p>
           </div>
         </div>

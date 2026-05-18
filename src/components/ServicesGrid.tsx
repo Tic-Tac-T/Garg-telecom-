@@ -3,27 +3,27 @@ import { Wifi, Network, Phone, Server, ArrowUpRight } from "lucide-react";
 const services = [
   {
     icon: Wifi,
-    title: "High-Speed Broadband & Fiber",
+    title: "Broadband & Fiber",
     description:
-      "Symmetric gigabit fiber for homes and offices with low-latency routing.",
+      "Reliable fiber connections for homes and offices, installed by our own technicians.",
   },
   {
     icon: Network,
-    title: "Enterprise Network Solutions",
+    title: "Office Networking",
     description:
-      "Managed SD-WAN, MPLS, and private connectivity engineered for scale.",
+      "Wi-Fi, routers, and small-office network setup done properly the first time.",
   },
   {
     icon: Phone,
-    title: "Cloud & VoIP Telephony",
+    title: "Cloud & VoIP Calling",
     description:
-      "Carrier-grade SIP trunking and cloud PBX with global DID coverage.",
+      "Simple cloud phone systems for small teams, with mobile and desktop apps.",
   },
   {
     icon: Server,
-    title: "Data Center Connectivity",
+    title: "Business Connectivity",
     description:
-      "Direct cross-connects, colocation links, and multi-cloud on-ramps.",
+      "Point-to-point links and backup lines for offices that need a steady connection.",
   },
 ];
 

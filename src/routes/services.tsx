@@ -26,37 +26,37 @@ const detailed = [
   {
     title: "High-Speed Broadband & Fiber",
     features: [
-      "Symmetric 100 Mbps – 10 Gbps plans",
-      "Dedicated public IP available",
-      "Static & dynamic routing options",
-      "Free professional installation",
+      "Symmetric 50 – 300 Mbps plans",
+      "Static IP available on request",
+      "Router included with installation",
+      "On-site setup by our technicians",
     ],
   },
   {
     title: "Enterprise Network Solutions",
     features: [
-      "Managed SD-WAN & MPLS",
-      "Site-to-site VPN tunnels",
-      "Branch-office connectivity",
-      "Network monitoring dashboard",
+      "Office & branch connectivity",
+      "Site-to-site VPN setup",
+      "Wi-Fi planning and access points",
+      "Basic network monitoring",
     ],
   },
   {
     title: "Cloud & VoIP Telephony",
     features: [
-      "SIP trunking with global DIDs",
-      "Cloud-hosted PBX",
-      "Call recording & analytics",
+      "SIP trunking for small teams",
+      "Cloud-hosted phone system",
+      "Call logs and recording",
       "Softphone & mobile apps",
     ],
   },
   {
     title: "Data Center Connectivity",
     features: [
-      "Direct cross-connects",
-      "Multi-cloud on-ramp (AWS / Azure / GCP)",
-      "Colocation links up to 100G",
-      "Disaster-recovery routing",
+      "Point-to-point links",
+      "Cloud on-ramp assistance",
+      "Colocation last-mile",
+      "Backup routing setup",
     ],
   },
 ];

@@ -16,7 +16,7 @@ export function Footer() {
             <MapPin className="mt-0.5 h-4 w-4 shrink-0" />
             Karol Bagh, New Delhi, Delhi - 110007
           </p>
-          <p className="mt-2 text-sm text-primary-foreground/70">+91-11-XXXX-XXXX</p>
+          <p className="mt-2 text-sm text-primary-foreground/70">+91 98110 24593</p>
           <p className="text-sm text-primary-foreground/70">support@gargtelecom.in</p>
         </div>
 
@@ -56,7 +56,7 @@ export function Footer() {
             ))}
           </div>
           <p className="mt-6 text-xs text-primary-foreground/60">
-            ISO 27001 Certified · TRAI Compliant
+            Built in New Delhi
           </p>
         </div>
       </div>
