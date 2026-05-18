@@ -54,13 +54,12 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="relative hidden lg:block">
-          <div className="absolute inset-0 rounded-3xl bg-white/5 backdrop-blur-md border border-white/10 shadow-elevated" />
+        <div className="relative lg:block">
           <img
-            src="https://images.unsplash.com/photo-1551808525-51a94da548ce?auto=format&fit=crop&w=1200&q=80"
-            alt="Fiber optic data center infrastructure"
+            src="/Telco_mast.webp"
+            alt="City skyline with network connectivity"
             loading="eager"
-            className="relative h-full w-full rounded-3xl object-cover opacity-90"
+            className="relative h-64 w-full rounded-3xl object-cover opacity-90 lg:h-full"
           />
         </div>
       </div>
