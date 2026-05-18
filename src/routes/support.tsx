@@ -26,7 +26,7 @@ export const Route = createFileRoute("/support")({
 });
 
 const channels = [
-  { icon: Headphones, title: "Call NOC", desc: "Live engineer in under 60 seconds.", value: "+91-11-XXXX-XXXX" },
+  { icon: Headphones, title: "Call NOC", desc: "Live engineer in under 60 seconds.", value: "+91 98110 24593" },
   { icon: MessageSquare, title: "Email", desc: "Tracked tickets with priority routing.", value: "support@gargtelecom.in" },
   { icon: FileText, title: "Knowledge Base", desc: "Setup guides, FAQs, and runbooks.", value: "Browse articles" },
 ];
