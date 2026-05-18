@@ -18,10 +18,10 @@ export const Route = createFileRoute("/about")({
 });
 
 const stats = [
-  { value: "500+", label: "Enterprise customers" },
-  { value: "12", label: "Cities live" },
-  { value: "8 Tbps", label: "Backbone capacity" },
-  { value: "99.9%", label: "Network uptime" },
+  { value: "2024", label: "Founded in New Delhi" },
+  { value: "Karol Bagh", label: "Head office" },
+  { value: "In-house", label: "Support team" },
+  { value: "Growing", label: "Customer base" },
 ];
 
 function AboutPage() {
