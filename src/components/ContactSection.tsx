@@ -60,7 +60,7 @@ export function ContactSection() {
               Karol Bagh, New Delhi, Delhi - 110007
             </InfoRow>
             <InfoRow icon={Phone} title="Sales & Support">
-              +91 98110 24593
+              +91 9953894014
             </InfoRow>
             <InfoRow icon={Mail} title="Email">
               hr@gargtelecom.in

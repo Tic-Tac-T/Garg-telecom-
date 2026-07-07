@@ -26,7 +26,7 @@ export const Route = createFileRoute("/support")({
 });
 
 const channels = [
-  { icon: Headphones, title: "Call Support", desc: "Speak with a real person, not a bot.", value: "+91 98110 24593" },
+  { icon: Headphones, title: "Call Support", desc: "Speak with a real person, not a bot.", value: "+91 9953894014" },
   { icon: MessageSquare, title: "Email", desc: "We reply within a few hours on business days.", value: "hr@gargtelecom.in" },
   { icon: FileText, title: "Help Articles", desc: "Setup guides and answers to common questions.", value: "Browse articles" },
 ];
