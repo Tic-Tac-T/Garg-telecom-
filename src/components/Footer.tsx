@@ -17,7 +17,7 @@ export function Footer() {
             Karol Bagh, New Delhi, Delhi - 110007
           </p>
           <p className="mt-2 text-sm text-primary-foreground/70">+91 98110 24593</p>
-          <p className="text-sm text-primary-foreground/70">support@gargtelecom.in</p>
+          <p className="text-sm text-primary-foreground/70">hr@gargtelecom.in</p>
         </div>
 
         <div>

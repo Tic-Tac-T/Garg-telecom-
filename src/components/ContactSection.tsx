@@ -63,7 +63,7 @@ export function ContactSection() {
               +91 98110 24593
             </InfoRow>
             <InfoRow icon={Mail} title="Email">
-              support@gargtelecom.in
+              hr@gargtelecom.in
             </InfoRow>
             <InfoRow icon={Clock} title="NOC Hours">
               24 / 7 / 365
