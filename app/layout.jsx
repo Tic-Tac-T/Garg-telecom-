@@ -1,22 +1,22 @@
-import { Outfit } from "next/font/google";
 import { Toaster } from "react-hot-toast";
 import StoreProvider from "@/app/StoreProvider";
+import { QuoteProvider } from "@/context/QuoteContext";
 import "./globals.css";
 
-const outfit = Outfit({ subsets: ["latin"], weight: ["400", "500", "600"] });
-
 export const metadata = {
-    title: "Marketo. - Shop smarter",
-    description: "Marketo. - Shop smarter",
+    title: "Garg Telecom – Telecom, Networking & Surveillance Solutions",
+    description: "Connecting Businesses. Securing Spaces. Powering Networks. Trusted dealership in Karol Bagh, New Delhi for Wi-Fi routers, network switches, CCTV, EPABX, intercoms & structured cabling.",
 };
 
 export default function RootLayout({ children }) {
     return (
         <html lang="en">
-            <body className={`${outfit.className} antialiased`}>
+            <body className="font-sans antialiased bg-slate-50 text-slate-900 selection:bg-blue-600 selection:text-white">
                 <StoreProvider>
-                    <Toaster />
-                    {children}
+                    <QuoteProvider>
+                        <Toaster position="bottom-right" />
+                        {children}
+                    </QuoteProvider>
                 </StoreProvider>
             </body>
         </html>

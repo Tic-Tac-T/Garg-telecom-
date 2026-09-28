@@ -1,0 +1,43 @@
+export const COMPANY_INFO = {
+    name: "Garg Telecom",
+    legalName: "Garg Telecom – Telecom, Networking & Surveillance Solutions",
+    tagline: "Connecting Businesses. Securing Spaces. Powering Networks.",
+    secondaryTagline: "Reliable Telecom & Networking Solutions for Homes and Businesses",
+    owner: "Sanjeev Kumar Bansal",
+    designation: "Proprietor & Managing Director",
+    address: {
+        street: "Karol Bagh Market",
+        area: "Karol Bagh",
+        city: "New Delhi",
+        state: "Delhi",
+        pincode: "110007",
+        fullAddress: "Karol Bagh, New Delhi, Delhi - 110007",
+        country: "India",
+        landmark: "Near Karol Bagh Metro Station (Blue Line), New Delhi",
+    },
+    contact: {
+        phone: "+91 9953894014",
+        phoneRaw: "+919953894014",
+        whatsapp: "+919953894014",
+        whatsappUrl: "https://wa.me/919953894014",
+        email: "hr@gargtelecom.in",
+    },
+    businessHours: {
+        monSat: "10:00 AM – 8:00 PM",
+        sunday: "Closed / Urgent Inquiries via WhatsApp",
+    },
+    b2bFeatures: [
+        "Official GST Invoicing & Input Tax Credit (ITC)",
+        "Same-Day Dispatch across Delhi-NCR",
+        "Pan-India Shipping for Bulk & Project Orders",
+        "Volume Discount Tiers for Resellers & Contractors",
+        "Dedicated Account Support for System Integrators",
+        "Genuine Manufacturer Warranty on 100% Products",
+    ],
+    statistics: [
+        { label: "Products in Catalog", value: "500+", suffix: "SKUs" },
+        { label: "Product Categories", value: "16+", suffix: "Domains" },
+        { label: "Leading Brands", value: "20+", suffix: "Global Brands" },
+        { label: "RFQ Turnaround", value: "< 2 hrs", suffix: "Avg. Response" },
+    ],
+};

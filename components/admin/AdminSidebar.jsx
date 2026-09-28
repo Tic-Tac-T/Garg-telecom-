@@ -1,42 +1,75 @@
-'use client'
+'use client';
 
-import { usePathname } from "next/navigation"
-import { HomeIcon, ShieldCheckIcon, StoreIcon, TicketPercentIcon } from "lucide-react"
-import Image from "next/image"
-import Link from "next/link"
-import { assets } from "@/assets/assets"
+import React from 'react';
+import { usePathname } from 'next/navigation';
+import Link from 'next/link';
+import {
+    LayoutDashboard,
+    FileText,
+    Boxes,
+    Building2,
+    Settings,
+    PhoneCall,
+    ExternalLink
+} from 'lucide-react';
+import { COMPANY_INFO } from '@/data/company';
 
-const AdminSidebar = () => {
+export default function AdminSidebar() {
+    const pathname = usePathname();
 
-    const pathname = usePathname()
-
-    const sidebarLinks = [
-        { name: 'Dashboard', href: '/admin', icon: HomeIcon },
-        { name: 'Stores', href: '/admin/stores', icon: StoreIcon },
-        { name: 'Approve Store', href: '/admin/approve', icon: ShieldCheckIcon },
-        { name: 'Coupons', href: '/admin/coupons', icon: TicketPercentIcon  },
-    ]
+    const links = [
+        { name: 'RFQ & Inquiries', href: '/admin', icon: FileText },
+        { name: 'Products Catalog', href: '/products', icon: Boxes, external: true },
+        { name: 'Store Info', href: '/about', icon: Building2, external: true },
+        { name: 'Contact Karol Bagh', href: '/contact', icon: PhoneCall, external: true },
+    ];
 
     return (
-        <div className="inline-flex h-full flex-col gap-5 border-r border-slate-200 sm:min-w-60">
-            <div className="flex flex-col gap-3 justify-center items-center pt-8 max-sm:hidden">
-                <Image className="w-14 h-14 rounded-full" src={assets.gs_logo} alt="" width={80} height={80} />
-                <p className="text-slate-700">Hi, GreatStack</p>
+        <aside className="w-64 bg-slate-900 border-r border-slate-800 flex flex-col justify-between p-4 hidden md:flex min-h-[calc(100vh-65px)]">
+            <div className="space-y-6">
+                {/* Dealer Profile summary */}
+                <div className="p-3.5 bg-slate-800/80 rounded-2xl border border-slate-700/60 text-xs space-y-1">
+                    <span className="text-[10px] font-bold text-cyan-400 uppercase tracking-wider block">
+                        Dealership Owner
+                    </span>
+                    <h4 className="text-sm font-bold text-white">{COMPANY_INFO.owner}</h4>
+                    <p className="text-slate-400 text-[11px]">{COMPANY_INFO.designation}</p>
+                    <p className="text-slate-500 text-[10px] pt-1">Karol Bagh, New Delhi</p>
+                </div>
+
+                {/* Nav Links */}
+                <div className="space-y-1.5">
+                    {links.map((link, idx) => {
+                        const Icon = link.icon;
+                        const isCurrent = pathname === link.href;
+                        return (
+                            <Link
+                                key={idx}
+                                href={link.href}
+                                target={link.external ? '_blank' : '_self'}
+                                className={`flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-semibold transition ${
+                                    isCurrent
+                                        ? 'bg-blue-600 text-white shadow-xs'
+                                        : 'text-slate-400 hover:text-white hover:bg-slate-800'
+                                }`}
+                            >
+                                <div className="flex items-center gap-2.5">
+                                    <Icon className="w-4 h-4" />
+                                    <span>{link.name}</span>
+                                </div>
+                                {link.external && <ExternalLink className="w-3 h-3 opacity-60" />}
+                            </Link>
+                        );
+                    })}
+                </div>
             </div>
 
-            <div className="max-sm:mt-6">
-                {
-                    sidebarLinks.map((link, index) => (
-                        <Link key={index} href={link.href} className={`relative flex items-center gap-3 text-slate-500 hover:bg-slate-50 p-2.5 transition ${pathname === link.href && 'bg-slate-100 sm:text-slate-600'}`}>
-                            <link.icon size={18} className="sm:ml-5" />
-                            <p className="max-sm:hidden">{link.name}</p>
-                            {pathname === link.href && <span className="absolute bg-green-500 right-0 top-1.5 bottom-1.5 w-1 sm:w-1.5 rounded-l"></span>}
-                        </Link>
-                    ))
-                }
+            {/* Quick Support Box */}
+            <div className="p-3 bg-slate-800/60 rounded-xl border border-slate-700/40 text-[11px] text-slate-400 space-y-1">
+                <span className="text-white font-bold block">Karol Bagh Desk</span>
+                <p>Mon - Sat: 10 AM - 8 PM</p>
+                <p className="text-emerald-400 font-mono">{COMPANY_INFO.contact.phone}</p>
             </div>
-        </div>
-    )
+        </aside>
+    );
 }
-
-export default AdminSidebar

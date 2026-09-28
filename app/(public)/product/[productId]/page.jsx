@@ -1,43 +1,25 @@
-'use client'
-import ProductDescription from "@/components/ProductDescription";
-import ProductDetails from "@/components/ProductDetails";
-import { useParams } from "next/navigation";
-import { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
+'use client';
 
-export default function Product() {
+import { useEffect } from 'react';
+import { useParams, useRouter } from 'next/navigation';
+import { PRODUCTS } from '@/data/products';
 
+export default function LegacyProductRedirect() {
     const { productId } = useParams();
-    const [product, setProduct] = useState();
-    const products = useSelector(state => state.product.list);
-
-    const fetchProduct = async () => {
-        const product = products.find((product) => product.id === productId);
-        setProduct(product);
-    }
+    const router = useRouter();
 
     useEffect(() => {
-        if (products.length > 0) {
-            fetchProduct()
+        const found = PRODUCTS.find(p => p.id === productId || p.slug === productId);
+        if (found) {
+            router.replace(`/products/${found.slug}`);
+        } else {
+            router.replace('/products');
         }
-        scrollTo(0, 0)
-    }, [productId,products]);
+    }, [productId, router]);
 
     return (
-        <div className="mx-6">
-            <div className="max-w-7xl mx-auto">
-
-                {/* Breadcrums */}
-                <div className="  text-gray-600 text-sm mt-8 mb-5">
-                    Home / Products / {product?.category}
-                </div>
-
-                {/* Product Details */}
-                {product && (<ProductDetails product={product} />)}
-
-                {/* Description & Reviews */}
-                {product && (<ProductDescription product={product} />)}
-            </div>
+        <div className="min-h-[50vh] flex items-center justify-center text-slate-500">
+            Loading equipment details...
         </div>
     );
 }

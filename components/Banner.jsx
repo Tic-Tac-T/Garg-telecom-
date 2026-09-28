@@ -1,31 +1,68 @@
-'use client'
-import React from 'react'
-import toast from 'react-hot-toast';
+'use client';
+
+import React from 'react';
+import Link from 'next/link';
+import { Phone, Mail, MapPin, MessageCircle, Clock, ShieldCheck } from 'lucide-react';
+import { COMPANY_INFO } from '@/data/company';
 
 export default function Banner() {
+    return (
+        <div className="bg-slate-900 text-slate-200 text-xs border-b border-slate-800 transition-all">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
+                <div className="flex flex-wrap items-center justify-between gap-y-2">
+                    {/* Left: Office location and timings */}
+                    <div className="flex items-center flex-wrap gap-x-4 gap-y-1">
+                        <span className="flex items-center gap-1.5 text-blue-400 font-medium">
+                            <MapPin className="w-3.5 h-3.5 text-blue-400" />
+                            {COMPANY_INFO.address.fullAddress}
+                        </span>
+                        <span className="hidden md:inline-block text-slate-600">|</span>
+                        <span className="hidden md:flex items-center gap-1.5 text-slate-300">
+                            <Clock className="w-3.5 h-3.5 text-slate-400" />
+                            Mon - Sat: 10:00 AM – 8:00 PM
+                        </span>
+                        <span className="hidden lg:inline-block text-slate-600">|</span>
+                        <span className="hidden lg:flex items-center gap-1.5 text-emerald-400">
+                            <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
+                            100% Genuine Telecom & Security Brands
+                        </span>
+                    </div>
 
-    const [isOpen, setIsOpen] = React.useState(true);
+                    {/* Right: Direct Contact & WhatsApp */}
+                    <div className="flex items-center gap-4 text-xs">
+                        <a
+                            href={`tel:${COMPANY_INFO.contact.phoneRaw}`}
+                            className="flex items-center gap-1.5 hover:text-blue-400 transition font-medium"
+                        >
+                            <Phone className="w-3.5 h-3.5 text-blue-400" />
+                            <span className="text-slate-300">Call:</span>
+                            <span className="text-white font-semibold">{COMPANY_INFO.contact.phone}</span>
+                        </a>
 
-    const handleClaim = () => {
-        setIsOpen(false);
-        toast.success('Coupon copied to clipboard!');
-        navigator.clipboard.writeText('NEW20');
-    };
+                        <span className="text-slate-600">|</span>
 
-    return isOpen && (
-        <div className="w-full px-6 py-1 font-medium text-sm text-white text-center bg-gradient-to-r from-violet-500 via-[#9938CA] to-[#E0724A]">
-            <div className='flex items-center justify-between max-w-7xl  mx-auto'>
-                <p>Get 20% OFF on Your First Order!</p>
-                <div className="flex items-center space-x-6">
-                    <button onClick={handleClaim} type="button" className="font-normal text-gray-800 bg-white px-7 py-2 rounded-full max-sm:hidden">Claim Offer</button>
-                    <button onClick={() => setIsOpen(false)} type="button" className="font-normal text-gray-800 py-2 rounded-full">
-                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect y="12.532" width="17.498" height="2.1" rx="1.05" transform="rotate(-45.74 0 12.532)" fill="#fff" />
-                            <rect x="12.533" y="13.915" width="17.498" height="2.1" rx="1.05" transform="rotate(-135.74 12.533 13.915)" fill="#fff" />
-                        </svg>
-                    </button>
+                        <a
+                            href={`mailto:${COMPANY_INFO.contact.email}`}
+                            className="hidden sm:flex items-center gap-1.5 hover:text-blue-400 transition"
+                        >
+                            <Mail className="w-3.5 h-3.5 text-slate-400" />
+                            <span className="text-slate-300">{COMPANY_INFO.contact.email}</span>
+                        </a>
+
+                        <span className="hidden sm:inline-block text-slate-600">|</span>
+
+                        <a
+                            href={COMPANY_INFO.contact.whatsappUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1.5 bg-emerald-700/60 hover:bg-emerald-600 text-emerald-200 hover:text-white px-2.5 py-0.5 rounded-full transition text-[11px] font-medium border border-emerald-500/30"
+                        >
+                            <MessageCircle className="w-3 h-3 fill-emerald-400 text-emerald-400" />
+                            WhatsApp Us
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     );
-};
+}
