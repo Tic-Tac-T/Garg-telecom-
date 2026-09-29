@@ -1,7 +1,9 @@
 <div align="center">
-  <h1>Marketo</h1>
+  <img src="./public/garg-telecom-logo.png" alt="Garg Telecom Pvt. Ltd." width="420" />
+  <h1>Garg Telecom Pvt. Ltd.</h1>
   <p>
-    An open-source multi-vendor e-commerce platform built with Next.js and Tailwind CSS.
+    <strong>Telecommunications & Digital Solutions</strong><br>
+    <em>Connecting People, Powering Businesses</em>
   </p>
 </div>
 

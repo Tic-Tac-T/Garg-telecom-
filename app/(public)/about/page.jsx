@@ -14,7 +14,7 @@ import {
     CheckCircle2,
     Truck,
     ArrowRight,
-    MessageCircle
+    FileText
 } from 'lucide-react';
 import { COMPANY_INFO } from '@/data/company';
 
@@ -24,14 +24,25 @@ export default function AboutPage() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Header */}
                 <div className="text-center max-w-3xl mx-auto mb-16">
-                    <span className="text-xs font-bold uppercase tracking-wider text-blue-700 bg-blue-50 border border-blue-200/80 px-3 py-1 rounded-full">
-                        Karol Bagh Established Dealership
-                    </span>
-                    <h1 className="text-3xl sm:text-4xl font-black text-slate-900 mt-2">
-                        About Garg Telecom
+                    <div className="flex justify-center mb-6">
+                        <div className="bg-white p-3 rounded-2xl shadow-sm border border-slate-200 inline-block">
+                            <img 
+                                src="/garg-telecom-logo.png" 
+                                alt="Garg Telecom Pvt. Ltd. - Telecommunications & Digital Solutions" 
+                                className="h-14 sm:h-16 w-auto object-contain" 
+                            />
+                        </div>
+                    </div>
+                    <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-blue-700 bg-blue-50 border border-blue-200/80 px-3.5 py-1 rounded-full mb-3">
+                        <span>Telecommunications & Sourcing</span>
+                        <span>•</span>
+                        <span>Karol Bagh, New Delhi</span>
+                    </div>
+                    <h1 className="text-3xl sm:text-4xl font-black text-slate-900">
+                        About Garg Telecom Pvt. Ltd.
                     </h1>
                     <p className="text-sm sm:text-base text-slate-600 mt-3 leading-relaxed">
-                        {COMPANY_INFO.legalName} – Connecting Businesses. Securing Spaces. Powering Networks.
+                        {COMPANY_INFO.division} • {COMPANY_INFO.tagline}
                     </p>
                 </div>
 
@@ -74,7 +85,7 @@ export default function AboutPage() {
                                     </div>
                                     <div>
                                         <span className="text-[10px] uppercase font-bold text-slate-400 block tracking-wider">
-                                            Proprietor & Director
+                                            Managing Director
                                         </span>
                                         <h3 className="text-lg font-bold text-white">
                                             {COMPANY_INFO.owner}
@@ -167,14 +178,12 @@ export default function AboutPage() {
                         >
                             Contact Details
                         </Link>
-                        <a
-                            href={COMPANY_INFO.contact.whatsappUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="px-5 py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs sm:text-sm rounded-xl transition shadow-md flex items-center gap-1.5"
+                        <Link
+                            href="/quote"
+                            className="px-5 py-3 bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs sm:text-sm rounded-xl transition border border-slate-700 shadow-md flex items-center gap-1.5"
                         >
-                            <MessageCircle className="w-4 h-4 fill-white" /> WhatsApp
-                        </a>
+                            <FileText className="w-4 h-4 text-cyan-400" /> Request RFQ
+                        </Link>
                     </div>
                 </div>
             </div>

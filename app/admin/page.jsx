@@ -7,7 +7,7 @@ import {
     Boxes,
     Building2,
     Phone,
-    MessageCircle,
+    Mail,
     Printer,
     Search,
     Filter,
@@ -299,15 +299,15 @@ export default function AdminDashboardPage() {
                                                 </td>
 
                                                 <td className="py-3 px-4 align-top text-right space-x-1.5 whitespace-nowrap">
-                                                    <a
-                                                        href={`https://wa.me/${quote.phone.replace(/[^0-9]/g, '')}?text=Hello%20${encodeURIComponent(quote.customerName)},%20this%20is%20Garg%20Telecom%20(Karol%20Bagh)%20regarding%20your%20quotation%20request%20${quote.id}.`}
-                                                        target="_blank"
-                                                        rel="noopener noreferrer"
-                                                        className="p-1.5 bg-emerald-50 text-emerald-700 hover:bg-emerald-100 rounded-lg inline-block"
-                                                        title="WhatsApp Customer"
-                                                    >
-                                                        <MessageCircle className="w-4 h-4 fill-emerald-600" />
-                                                    </a>
+                                                    {quote.email && (
+                                                        <a
+                                                            href={`mailto:${quote.email}?subject=Quotation%20${quote.id}%20-%20Garg%20Telecom`}
+                                                            className="p-1.5 bg-blue-50 text-blue-700 hover:bg-blue-100 rounded-lg inline-block"
+                                                            title="Email Customer"
+                                                        >
+                                                            <Mail className="w-4 h-4" />
+                                                        </a>
+                                                    )}
 
                                                     <a
                                                         href={`tel:${quote.phone}`}

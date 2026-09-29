@@ -16,6 +16,7 @@ import {
     ArrowRight
 } from 'lucide-react';
 import { CATEGORIES } from '@/data/categories';
+import { PRODUCTS } from '@/data/products';
 
 export default function CategoriesSection() {
     // Map string names to Lucide icon components
@@ -73,20 +74,22 @@ export default function CategoriesSection() {
 
                 {/* Categories Cards Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                    {CATEGORIES.slice(0, 8).map((cat) => (
-                        <div
-                            key={cat.id}
-                            className="bg-white rounded-2xl border border-slate-200 hover:border-blue-400 p-6 shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
-                        >
-                            <div>
-                                <div className="flex items-center justify-between mb-4">
-                                    <div className="w-12 h-12 rounded-xl bg-blue-50 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300 flex items-center justify-center text-blue-600">
-                                        {getCategoryIcon(cat.icon)}
+                    {CATEGORIES.slice(0, 8).map((cat) => {
+                        const count = PRODUCTS.filter(p => p.category === cat.slug).length;
+                        return (
+                            <div
+                                key={cat.id}
+                                className="bg-white rounded-2xl border border-slate-200 hover:border-blue-400 p-6 shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
+                            >
+                                <div>
+                                    <div className="flex items-center justify-between mb-4">
+                                        <div className="w-12 h-12 rounded-xl bg-blue-50 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300 flex items-center justify-center text-blue-600">
+                                            {getCategoryIcon(cat.icon)}
+                                        </div>
+                                        <span className="text-xs font-mono font-bold text-slate-400 group-hover:text-blue-600 transition">
+                                            {count > 0 ? `${count} ${count === 1 ? 'Model' : 'Models'}` : 'Stock Hub'}
+                                        </span>
                                     </div>
-                                    <span className="text-xs font-mono font-bold text-slate-400 group-hover:text-blue-600 transition">
-                                        {cat.productCount}+ SKUs
-                                    </span>
-                                </div>
 
                                 <h3 className="text-base font-bold text-slate-900 group-hover:text-blue-600 transition mb-2">
                                     {cat.name}
@@ -117,7 +120,8 @@ export default function CategoriesSection() {
                                 <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                             </Link>
                         </div>
-                    ))}
+                    );
+                    })}
                 </div>
             </div>
         </section>

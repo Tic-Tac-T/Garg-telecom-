@@ -33,7 +33,7 @@ export default function BusinessSolutionsSection() {
                             Solutions for Every Requirement
                         </h2>
                         <p className="text-sm sm:text-base text-slate-300 mt-2 max-w-2xl">
-                            How Garg Telecom provides equipment packages, bill of materials (BOM), and installation coordination for commercial, retail, and residential applications.
+                            How Garg Telecom provides equipment packages, bill of materials (BOM), and wholesale hardware supply for commercial, retail, and residential applications.
                         </p>
                     </div>
 

@@ -6,7 +6,7 @@ import {
     BadgePercent,
     ShieldCheck,
     Building2,
-    Wrench,
+    Truck,
     HeadphonesIcon,
     RotateCcw,
     Zap
@@ -17,7 +17,7 @@ export default function WhyChooseUs() {
         {
             icon: <Boxes className="w-6 h-6 text-blue-600" />,
             title: "Wide Product Selection",
-            desc: "Over 500+ SKUs in ready stock covering switches, CCTV, routers, solid copper CAT6 cables, and PBX systems."
+            desc: "Over 500+ SKUs in ready stock covering switches, CCTV, routers, solid copper CAT6 cables, and fiber optic accessories."
         },
         {
             icon: <BadgePercent className="w-6 h-6 text-cyan-600" />,
@@ -35,9 +35,9 @@ export default function WhyChooseUs() {
             desc: "Official GST tax invoices with Input Tax Credit (ITC), formal purchase order handling, and project packing."
         },
         {
-            icon: <Wrench className="w-6 h-6 text-amber-600" />,
-            title: "Installation Assistance",
-            desc: "Hands-on technical guidance and field technician deployment support for projects across Delhi-NCR."
+            icon: <Truck className="w-6 h-6 text-amber-600" />,
+            title: "Ready Stock & Fast Dispatch",
+            desc: "Immediate counter pickup in Karol Bagh, same-day delivery across Delhi-NCR, and express Pan-India cargo."
         },
         {
             icon: <HeadphonesIcon className="w-6 h-6 text-purple-600" />,
@@ -52,7 +52,7 @@ export default function WhyChooseUs() {
         {
             icon: <Zap className="w-6 h-6 text-yellow-600" />,
             title: "Fast Enquiry Response",
-            desc: "Official itemized quotations and WhatsApp consultations delivered within 2 hours during business hours."
+            desc: "Official itemized quotations and RFQ proposals delivered within 2 hours during business hours."
         }
     ];
 
@@ -65,7 +65,7 @@ export default function WhyChooseUs() {
                         Karol Bagh Dealership Advantage
                     </span>
                     <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-slate-900 mt-2">
-                        Why Choose Garg Telecom
+                        Why Choose Garg Telecom Pvt. Ltd.
                     </h2>
                     <p className="text-sm sm:text-base text-slate-600 mt-3 leading-relaxed">
                         For businesses looking to procure ₹5,000 to ₹5,00,000+ in networking and security equipment, we offer authentic hardware, wholesale pricing, and expert engineering assistance.

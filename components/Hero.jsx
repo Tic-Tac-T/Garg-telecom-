@@ -36,22 +36,22 @@ export default function Hero() {
                         {/* Location & Trust Badge */}
                         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-900/60 border border-blue-500/30 text-blue-300 text-xs font-semibold backdrop-blur-sm shadow-xs">
                             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-                            <span>Karol Bagh, New Delhi – Trusted Telecom & Surveillance Hub</span>
+                            <span>Garg Telecom Pvt. Ltd. • Connecting People, Powering Businesses</span>
                         </div>
 
                         {/* Main Hero Headline */}
                         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-white leading-tight">
-                            Complete Telecom, <br className="hidden sm:inline" />
+                            Telecommunications & <br className="hidden sm:inline" />
                             <span className="bg-gradient-to-r from-blue-400 via-cyan-300 to-blue-500 bg-clip-text text-transparent">
-                                Networking & Surveillance
+                                Digital Infrastructure
                             </span>{" "}
                             Solutions
                         </h1>
 
                         {/* Subheading */}
                         <p className="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
-                            From routers and network switches to CCTV systems, intercoms and enterprise networking equipment,{" "}
-                            <strong className="text-white font-semibold">Garg Telecom</strong> provides reliable technology solutions for homes and businesses across Delhi-NCR and Pan-India.
+                            From high-throughput optical fiber and enterprise Gigabit switches to AI CCTV surveillance and structured cabling,{" "}
+                            <strong className="text-white font-semibold">Garg Telecom Pvt. Ltd.</strong> connects people and powers businesses with authentic OEM hardware, official GST invoicing, and competitive wholesale B2B pricing.
                         </p>
 
                         {/* Primary & Secondary Call to Actions */}
@@ -107,10 +107,10 @@ export default function Hero() {
                             </div>
 
                             <div className="flex items-center gap-2.5">
-                                <Wrench className="w-5 h-5 text-amber-400 flex-shrink-0" />
+                                <Truck className="w-5 h-5 text-amber-400 flex-shrink-0" />
                                 <div>
-                                    <h5 className="text-xs font-bold text-white">Installation</h5>
-                                    <p className="text-[11px] text-slate-400">Delhi-NCR Help</p>
+                                    <h5 className="text-xs font-bold text-white">Express Dispatch</h5>
+                                    <p className="text-[11px] text-slate-400">Delhi-NCR & Pan-India</p>
                                 </div>
                             </div>
                         </div>
@@ -135,31 +135,37 @@ export default function Hero() {
                             {/* Equipment Interactive Grid */}
                             <div className="space-y-3">
                                 {/* Item 1: Cisco Switch */}
-                                <div className="p-3 bg-slate-800/70 hover:bg-slate-800 rounded-xl border border-slate-700/60 transition group flex items-center justify-between">
+                                <Link
+                                    href="/products/cisco-cbs250-24p-4g-gigabit-poe-switch"
+                                    className="p-3 bg-slate-800/80 hover:bg-slate-800 rounded-xl border border-slate-700/60 hover:border-blue-500/50 transition group flex items-center justify-between"
+                                >
                                     <div className="flex items-center gap-3">
-                                        <div className="w-10 h-10 rounded-lg bg-blue-950 border border-blue-600/40 flex items-center justify-center text-cyan-400 font-bold text-xs">
-                                            SW
+                                        <div className="w-11 h-11 rounded-lg overflow-hidden border border-slate-700/80 flex-shrink-0 bg-slate-900">
+                                            <img src="/products/switch.jpg" alt="Cisco CBS250 Switch" className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
                                         </div>
                                         <div>
                                             <div className="flex items-center gap-2">
                                                 <span className="text-xs font-bold text-white group-hover:text-blue-400 transition">
-                                                    Cisco CBS110 / CBS250
+                                                    Cisco CBS250-24P-4G
                                                 </span>
                                                 <span className="text-[9px] bg-blue-500/20 text-blue-300 px-1.5 py-0.2 rounded font-mono">
                                                     24P PoE+
                                                 </span>
                                             </div>
-                                            <p className="text-[11px] text-slate-400">Gigabit & Smart Managed Switching</p>
+                                            <p className="text-[11px] text-slate-400">Gigabit Smart Managed Switching</p>
                                         </div>
                                     </div>
                                     <span className="text-xs font-mono font-bold text-emerald-400">In Stock</span>
-                                </div>
+                                </Link>
 
                                 {/* Item 2: Hikvision CCTV */}
-                                <div className="p-3 bg-slate-800/70 hover:bg-slate-800 rounded-xl border border-slate-700/60 transition group flex items-center justify-between">
+                                <Link
+                                    href="/products/hikvision-4mp-acusense-bullet-ip-camera"
+                                    className="p-3 bg-slate-800/80 hover:bg-slate-800 rounded-xl border border-slate-700/60 hover:border-red-500/50 transition group flex items-center justify-between"
+                                >
                                     <div className="flex items-center gap-3">
-                                        <div className="w-10 h-10 rounded-lg bg-red-950 border border-red-600/40 flex items-center justify-center text-red-400 font-bold text-xs">
-                                            CAM
+                                        <div className="w-11 h-11 rounded-lg overflow-hidden border border-slate-700/80 flex-shrink-0 bg-slate-900">
+                                            <img src="/products/bullet-cctv.jpg" alt="Hikvision 4MP AcuSense" className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
                                         </div>
                                         <div>
                                             <div className="flex items-center gap-2">
@@ -174,13 +180,16 @@ export default function Hero() {
                                         </div>
                                     </div>
                                     <span className="text-xs font-mono font-bold text-emerald-400">In Stock</span>
-                                </div>
+                                </Link>
 
                                 {/* Item 3: D-Link CAT6 Cable */}
-                                <div className="p-3 bg-slate-800/70 hover:bg-slate-800 rounded-xl border border-slate-700/60 transition group flex items-center justify-between">
+                                <Link
+                                    href="/products/dlink-cat6-solid-copper-utp-cable-305m"
+                                    className="p-3 bg-slate-800/80 hover:bg-slate-800 rounded-xl border border-slate-700/60 hover:border-emerald-500/50 transition group flex items-center justify-between"
+                                >
                                     <div className="flex items-center gap-3">
-                                        <div className="w-10 h-10 rounded-lg bg-emerald-950 border border-emerald-600/40 flex items-center justify-center text-emerald-400 font-bold text-xs">
-                                            CBL
+                                        <div className="w-11 h-11 rounded-lg overflow-hidden border border-slate-700/80 flex-shrink-0 bg-slate-900">
+                                            <img src="/products/cat6-cable.jpg" alt="D-Link CAT6 Cable" className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
                                         </div>
                                         <div>
                                             <div className="flex items-center gap-2">
@@ -195,34 +204,37 @@ export default function Hero() {
                                         </div>
                                     </div>
                                     <span className="text-xs font-mono font-bold text-emerald-400">In Stock</span>
-                                </div>
+                                </Link>
 
-                                {/* Item 4: Panasonic PBX Intercom */}
-                                <div className="p-3 bg-slate-800/70 hover:bg-slate-800 rounded-xl border border-slate-700/60 transition group flex items-center justify-between">
+                                {/* Item 4: TP-Link Wi-Fi 6 Router */}
+                                <Link
+                                    href="/products/tplink-archer-ax73-wifi6-gigabit-router"
+                                    className="p-3 bg-slate-800/80 hover:bg-slate-800 rounded-xl border border-slate-700/60 hover:border-cyan-500/50 transition group flex items-center justify-between"
+                                >
                                     <div className="flex items-center gap-3">
-                                        <div className="w-10 h-10 rounded-lg bg-amber-950 border border-amber-600/40 flex items-center justify-center text-amber-400 font-bold text-xs">
-                                            PBX
+                                        <div className="w-11 h-11 rounded-lg overflow-hidden border border-slate-700/80 flex-shrink-0 bg-slate-900">
+                                            <img src="/products/router.jpg" alt="TP-Link Archer AX73 Wi-Fi 6 Router" className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
                                         </div>
                                         <div>
                                             <div className="flex items-center gap-2">
-                                                <span className="text-xs font-bold text-white group-hover:text-amber-400 transition">
-                                                    Panasonic KX-TES824
+                                                <span className="text-xs font-bold text-white group-hover:text-cyan-400 transition">
+                                                    TP-Link Archer AX73
                                                 </span>
-                                                <span className="text-[9px] bg-amber-500/20 text-amber-300 px-1.5 py-0.2 rounded font-mono">
-                                                    3CO/8Ext
+                                                <span className="text-[9px] bg-cyan-500/20 text-cyan-300 px-1.5 py-0.2 rounded font-mono">
+                                                    Wi-Fi 6
                                                 </span>
                                             </div>
-                                            <p className="text-[11px] text-slate-400">Office Telephony & Intercom Systems</p>
+                                            <p className="text-[11px] text-slate-400">AX5400 Gigabit Dual-Band Router</p>
                                         </div>
                                     </div>
                                     <span className="text-xs font-mono font-bold text-emerald-400">In Stock</span>
-                                </div>
+                                </Link>
                             </div>
 
                             {/* Direct Wholesale Box */}
                             <div className="mt-5 p-3.5 bg-gradient-to-r from-blue-950 to-slate-900 border border-blue-500/30 rounded-2xl flex items-center justify-between">
                                 <div className="text-xs">
-                                    <span className="text-slate-400 block">Proprietor Desk</span>
+                                    <span className="text-slate-400 block text-[11px]">Managing Director</span>
                                     <span className="font-bold text-white">{COMPANY_INFO.owner}</span>
                                 </div>
                                 <a

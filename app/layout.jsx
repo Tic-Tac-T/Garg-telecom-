@@ -4,8 +4,15 @@ import { QuoteProvider } from "@/context/QuoteContext";
 import "./globals.css";
 
 export const metadata = {
-    title: "Garg Telecom – Telecom, Networking & Surveillance Solutions",
-    description: "Connecting Businesses. Securing Spaces. Powering Networks. Trusted dealership in Karol Bagh, New Delhi for Wi-Fi routers, network switches, CCTV, EPABX, intercoms & structured cabling.",
+    title: "Garg Telecom Pvt. Ltd. – Telecommunications & Digital Solutions",
+    description: "Connecting People. Powering Businesses. Premier enterprise telecommunications, optical fiber, networking infrastructure, CCTV surveillance & structured cabling based in Karol Bagh, New Delhi (110007). Official GST Invoicing & GeM Registered.",
+    icons: {
+        icon: [
+            { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+            { url: "/android-chrome-192x192.png", sizes: "192x192", type: "image/png" }
+        ],
+        apple: "/apple-touch-icon.png",
+    },
 };
 
 export default function RootLayout({ children }) {

@@ -28,10 +28,10 @@ export const SERVICES = [
             "AcuSense AI cameras with human and vehicle false-alarm filtering",
             "Surveillance storage drives engineered for 24/7 continuous recording",
             "High-power PoE switches designed for long-distance camera runs up to 250m",
-            "All installation accessories: BNC/DC pins, waterproof junction boxes, SMPS"
+            "All connection accessories: BNC/DC pins, waterproof junction boxes, SMPS"
         ],
         idealFor: "Shops, showrooms, warehouses, residential complexes, hotels, and schools.",
-        disclaimer: "Equipment supply is available Pan-India. On-site installation assistance is primarily available across Delhi-NCR."
+        disclaimer: "Equipment supply is available Pan-India with express cargo and local Karol Bagh counter pickup."
     },
     {
         id: "structured-cabling-solutions",
@@ -51,55 +51,55 @@ export const SERVICES = [
         disclaimer: "Bulk cable rolls available in master cartons with special contractor pricing."
     },
     {
-        id: "network-installation-assistance",
-        slug: "network-installation-assistance",
-        title: "Network Installation Assistance",
-        badge: "On-Site Support",
-        shortDesc: "Hands-on installation guidance and technical contractor coordination for commercial and residential networks.",
-        description: "Need help bringing your network alive? In addition to hardware supply, Garg Telecom coordinates with experienced field technicians and network engineers across Delhi-NCR to provide site assessment, rack mounting, switch configuration, and VLAN segmentation.",
+        id: "server-rack-pdu-supply",
+        slug: "server-rack-pdu-supply",
+        title: "Server Racks & Power Distribution Supply",
+        badge: "Rack Infrastructure",
+        shortDesc: "Wholesale supply of 4U to 42U network server racks, PDU units, cable managers, and rack mount hardware.",
+        description: "Organize your networking gear with heavy-duty server racks, wall-mount enclosures, and power distribution units. Garg Telecom maintains bulk ready stock of 4U, 6U, 9U, 12U wall-mount cabinets up to 42U floor-standing server racks, loaded patch panels, and industrial PDUs.",
         features: [
-            "Pre-installation site consultation and equipment sizing",
-            "Server rack mounting, wire dressing, and patch panel punching",
-            "Switch VLAN setup, port security, and router configuration",
-            "Wi-Fi dead-zone troubleshooting and channel optimization",
-            "Post-installation speed tests and port-mapping documentation"
+            "4U to 42U CRCA cold-rolled steel enclosures with toughened glass front doors",
+            "Universal 19-inch mounting profiles compatible with Cisco, D-Link, and TP-Link switches",
+            "Horizontal & vertical cable organizers for clean, tangle-free patching",
+            "Rack-mount 6-way and 8-way surge-protected PDU power distribution strips",
+            "Immediate depot pickup or doorstep delivery across Delhi-NCR and Pan-India"
         ],
-        idealFor: "New office setups, co-working spaces, expanding startups, and retail outlets.",
-        disclaimer: "Installation and technical support services may be available depending on project requirements and location within Delhi-NCR."
+        idealFor: "Server rooms, data centers, CCTV control rooms, corporate network closets, and retail back-offices.",
+        disclaimer: "Fully assembled and flat-pack rack options available for easy transport and swift assembly."
     },
     {
-        id: "cctv-installation-assistance",
-        slug: "cctv-installation-assistance",
-        title: "CCTV Installation Assistance",
-        badge: "Security Deployment",
-        shortDesc: "Professional surveillance camera mounting, cabling, NVR configuration, and mobile remote-viewing setup.",
-        description: "Garg Telecom facilitates complete on-site CCTV deployment assistance. From positioning cameras at critical blind spots and running conduit cabling to configuring NVR recording schedules, motion alerts, and mobile viewing apps (Hik-Connect, gCMOB) on customer smartphones.",
+        id: "surveillance-storage-accessories",
+        slug: "surveillance-storage-accessories",
+        title: "Surveillance Storage & Power Accessories",
+        badge: "CCTV Hardware & Power",
+        shortDesc: "Bulk B2B supply of 24/7 surveillance HDDs, multi-channel CCTV SMPS, baluns, connectors, and DC splitters.",
+        description: "Ensure non-stop recording and dependable power for your camera infrastructure. Garg Telecom supplies enterprise surveillance hard drives (WD Purple, Seagate SkyHawk up to 10TB) alongside regulated multi-channel CCTV SMPS power supplies, BNC connectors, and copper patch jumpers.",
         features: [
-            "Optimal camera angle planning for entrances, aisles, and cash counters",
-            "Neat conduit/casing piping and waterproof exterior junction boxes",
-            "NVR/DVR recording schedule, motion detection, and cloud P2P mobile setup",
-            "Surveillance HDD formatting and storage retention calculation",
-            "User training on reviewing video playback and exporting incident clips"
+            "Western Digital Purple & Seagate SkyHawk 24/7 continuous recording drives (1TB to 10TB)",
+            "4-channel, 8-channel, and 16-channel regulated SMPS with short-circuit protection",
+            "Heavy-duty pure copper BNC, DC power jacks, and video baluns",
+            "Weatherproof IP66 outdoor junction boxes for clean camera termination",
+            "Genuine OEM manufacturer warranty with direct distributor RMA replacement support"
         ],
-        idealFor: "Boutiques, jewelers, factories, homes, medical clinics, and gated societies.",
-        disclaimer: "Installation services are subject to site survey and technician schedule in Delhi-NCR."
+        idealFor: "CCTV security installers, warehouse operators, facility managers, and IT hardware retailers.",
+        disclaimer: "Hard drive serial numbers are cataloged and matched on your GST invoice for hassle-free warranty claims."
     },
     {
-        id: "telecom-intercom-epabx",
-        slug: "telecom-intercom-epabx",
-        title: "Office EPABX & Intercom Systems",
-        badge: "Voice Communications",
-        shortDesc: "Supply and configuration of Panasonic/Matrix hybrid PBX, intercom networks, and video door phone kits.",
-        description: "Streamline voice communication between departments and enhance gate security. We supply Panasonic hybrid PBX systems, Beetel caller-ID landlines, Grandstream HD IP phones, and modern video door phone intercoms with color display monitors.",
+        id: "enterprise-wifi-mesh",
+        slug: "enterprise-wifi-mesh",
+        title: "Enterprise Wi-Fi & Wireless Solutions",
+        badge: "Wireless & Cloud",
+        shortDesc: "High-density enterprise Wi-Fi 6 AP deployments, wireless controller setup, and seamless roaming mesh solutions.",
+        description: "Deploy high-throughput enterprise Wi-Fi coverage across multi-story buildings, warehouses, schools, and offices. We supply TP-Link Omada, Ubiquiti UniFi, and Cisco Business wireless access points, PoE switches, and cloud SDN controllers.",
         features: [
-            "Analog, digital, and IP PBX telephone systems",
-            "Direct Inward Dialing (DID), call forwarding, and auto-attendant IVR",
-            "Video door phone kits with two-way audio and electronic lock release",
-            "Multi-pair telecom cabling, MDF tag blocks, and telephone patch cords",
-            "Beetel and Panasonic corded/cordless handsets"
+            "Wi-Fi 6 AX3000/AX5400 dual-band ceiling and outdoor access points",
+            "Seamless fast-roaming 802.11k/v/r without call drops",
+            "VLAN-isolated Guest Wi-Fi with captive portal & bandwidth limits",
+            "Centralized Cloud SDN dashboard (Omada / UniFi controller)",
+            "Power over Ethernet (PoE 802.3af/at) single-cable deployment support"
         ],
-        idealFor: "Corporate head offices, hospitals, factories, residential complexes, and villas.",
-        disclaimer: "Custom extension expansion cards and wiring accessories quoted on request."
+        idealFor: "Corporate offices, co-working spaces, colleges, warehouses, hotels, and cafes.",
+        disclaimer: "Wi-Fi heat mapping and coverage planning provided for floor plans upon request."
     },
     {
         id: "bulk-procurement-b2b",
@@ -127,10 +127,10 @@ export const SERVICES = [
         description: "Avoid expensive purchasing mistakes such as undersized PoE switches, slow Wi-Fi access points, or inadequate surveillance storage. Our experienced team in Karol Bagh provides practical, vendor-neutral hardware advice tailored to your square footage and user load.",
         features: [
             "Bandwidth and throughput calculations based on active device counts",
-            "PoE wattage budget matching for cameras and VoIP phones",
+            "PoE wattage budget matching for cameras and access points",
             "Storage retention calculations based on camera resolution and FPS",
             "Future-proofing recommendations for 3 to 5 years of business growth",
-            "Direct phone & WhatsApp consultation with Sanjeev Kumar Bansal & technical team"
+            "Direct phone & email consultation with Sanjeev Kumar Bansal & technical team"
         ],
         idealFor: "Business owners, startups setting up their first office, and architects.",
         disclaimer: "Initial phone and counter consultation is complimentary for all prospective clients."

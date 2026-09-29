@@ -9,21 +9,22 @@ export default function AdminNavbar() {
     return (
         <header className="flex items-center justify-between px-6 lg:px-10 py-3.5 bg-slate-900 border-b border-slate-800 text-white">
             <div className="flex items-center gap-3">
-                <div className="w-9 h-9 rounded-xl bg-blue-600 flex items-center justify-center text-white shadow-xs">
-                    <Network className="w-5 h-5" />
-                </div>
+                <Link href="/" className="bg-white px-2 py-1 rounded-lg">
+                    <img 
+                        src="/garg-telecom-logo.png" 
+                        alt="Garg Telecom Pvt. Ltd." 
+                        className="h-8 w-auto object-contain" 
+                    />
+                </Link>
                 <div>
                     <div className="flex items-center gap-2">
-                        <span className="text-base font-black tracking-tight text-white">
-                            GARG TELECOM
-                        </span>
                         <span className="text-[10px] font-bold text-cyan-400 bg-cyan-950 px-2 py-0.5 rounded border border-cyan-800/40">
-                            DEALER PORTAL
+                            ENTERPRISE NOC & OPERATIONS
+                        </span>
+                        <span className="text-[10px] text-slate-400 font-medium hidden md:inline">
+                            Karol Bagh Operations Hub
                         </span>
                     </div>
-                    <span className="text-[10px] text-slate-400 block">
-                        Karol Bagh, New Delhi (110007) • Proprietor: {COMPANY_INFO.owner}
-                    </span>
                 </div>
             </div>
 

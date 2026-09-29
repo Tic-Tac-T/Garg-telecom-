@@ -98,24 +98,6 @@ export const CATEGORIES = [
         ]
     },
     {
-        id: "intercom-telecom",
-        slug: "intercom-telecom",
-        name: "Intercom & EPABX Systems",
-        shortDesc: "Office PBX, Video Door Phones & Hybrid Telephone Systems",
-        description: "Complete voice communication setups for corporate offices, hospitals, residential societies, and multi-story homes. Advanced hybrid EPABX systems, video door phone intercom kits, and multi-tenant intercoms.",
-        icon: "PhoneCall",
-        productCount: 8,
-        featured: true,
-        popularBrands: ["Panasonic", "Matrix", "Hikvision", "Beetel"],
-        buyingGuide: "Calculate your present number of telephone CO lines and internal intercom extensions, then select an EPABX model with room for future card expansion.",
-        faqs: [
-            {
-                q: "What is an EPABX system?",
-                a: "An Electronic Private Automatic Branch Exchange (EPABX) is a telephone switching system that allows users to share a few external telephone lines while calling between internal departments without phone call charges."
-            }
-        ]
-    },
-    {
         id: "wifi-access-points",
         slug: "wifi-access-points",
         name: "Wi-Fi Access Points & Extenders",
@@ -129,7 +111,7 @@ export const CATEGORIES = [
         faqs: [
             {
                 q: "What is seamless fast roaming?",
-                a: "Seamless roaming (802.11k/v/r) enables smartphones and laptops to switch between access points as you walk around the premises without dropping Zoom or WhatsApp calls."
+                a: "Seamless roaming (802.11k/v/r) enables smartphones and laptops to switch between access points as you walk around the premises without dropping VoIP or video calls."
             }
         ]
     },
@@ -138,7 +120,7 @@ export const CATEGORIES = [
         slug: "network-racks-accessories",
         name: "Network Racks & Accessories",
         shortDesc: "4U to 42U Wall & Floor Racks, Patch Panels & Cable Organizers",
-        description: "Heavy-duty CRCA steel network server racks, front glass doors with locks, 24/48 port loaded patch panels, horizontal wire managers, PDU power distribution units, and installation accessories.",
+        description: "Heavy-duty CRCA steel network server racks, front glass doors with locks, 24/48 port loaded patch panels, horizontal wire managers, PDU power distribution units, and mounting accessories.",
         icon: "Server",
         productCount: 15,
         featured: false,

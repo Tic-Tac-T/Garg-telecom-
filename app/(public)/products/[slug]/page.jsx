@@ -64,19 +64,6 @@ export default function ProductDetailPage({ params }) {
         addItem(product, quantity);
     };
 
-    const handleWhatsApp = () => {
-        const text = `*Inquiry from Garg Telecom Website*%0A` +
-            `*Product:* ${product.name}%0A` +
-            `*Model:* ${product.model} (${product.brand})%0A` +
-            `*Indicative Price:* ${product.priceDisplay}%0A` +
-            `*Quantity Required:* ${quantity} Units%0A` +
-            `*Page URL:* https://gargtelecom.in/products/${product.slug}%0A` +
-            `----------------------------------%0A` +
-            `Hello Sanjeev ji, please share best wholesale B2B quote and delivery timeline for this item.`;
-
-        window.open(`https://wa.me/${COMPANY_INFO.contact.phoneRaw.replace(/[^0-9]/g, '')}?text=${text}`, '_blank');
-    };
-
     const handleInquirySubmit = (e) => {
         e.preventDefault();
         if (!inquiryData.phone || inquiryData.phone.length < 10) {
@@ -109,9 +96,25 @@ export default function ProductDetailPage({ params }) {
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
                         {/* Left: Product Visual Presentation (5 Cols) */}
                         <div className="lg:col-span-5 space-y-4">
-                            <div className="w-full h-80 sm:h-96 rounded-2xl bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 border border-slate-800 flex flex-col items-center justify-center p-8 relative overflow-hidden shadow-md">
+                            <div className="w-full h-80 sm:h-96 rounded-2xl bg-white border border-slate-200 flex items-center justify-center p-3 relative overflow-hidden shadow-sm">
+                                {product.imageUrl ? (
+                                    <img
+                                        src={product.imageUrl}
+                                        alt={product.name}
+                                        className="w-full h-full object-cover rounded-xl"
+                                    />
+                                ) : (
+                                    <div className="text-center space-y-3">
+                                        <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-3xl bg-blue-900/60 border border-blue-500/40 flex items-center justify-center mx-auto shadow-inner">
+                                            <span className="text-2xl sm:text-3xl font-black text-cyan-300 font-mono tracking-widest">
+                                                {product.brand.slice(0, 3).toUpperCase()}
+                                            </span>
+                                        </div>
+                                    </div>
+                                )}
+
                                 <div className="absolute top-4 left-4 flex flex-col gap-1.5">
-                                    <span className="text-xs font-bold uppercase tracking-wider text-cyan-400 bg-cyan-950/80 border border-cyan-800/40 px-3 py-1 rounded-full">
+                                    <span className="text-xs font-bold uppercase tracking-wider text-blue-700 bg-white/95 border border-blue-200/80 px-3 py-1 rounded-full shadow-xs">
                                         {product.brand}
                                     </span>
                                     {product.badge && (
@@ -121,29 +124,13 @@ export default function ProductDetailPage({ params }) {
                                     )}
                                 </div>
 
-                                <div className="text-center space-y-3">
-                                    <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-3xl bg-blue-900/60 border border-blue-500/40 flex items-center justify-center mx-auto shadow-inner">
-                                        <span className="text-2xl sm:text-3xl font-black text-cyan-300 font-mono tracking-widest">
-                                            {product.brand.slice(0, 3).toUpperCase()}
-                                        </span>
-                                    </div>
-                                    <div className="space-y-1">
-                                        <span className="text-lg sm:text-xl font-black text-white block font-mono">
-                                            {product.model}
-                                        </span>
-                                        <span className="text-xs text-slate-400 block max-w-xs">
-                                            {product.subCategory || product.categoryName}
-                                        </span>
-                                    </div>
-                                </div>
-
                                 <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs">
-                                    <span className="text-emerald-400 bg-slate-900/80 px-2.5 py-1 rounded-lg border border-emerald-500/30 font-semibold flex items-center gap-1.5">
-                                        <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
+                                    <span className="text-emerald-700 bg-white/95 px-2.5 py-1 rounded-lg border border-emerald-200 font-semibold flex items-center gap-1.5 shadow-xs">
+                                        <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
                                         {product.stockStatus || "In Stock - Karol Bagh"}
                                     </span>
-                                    <span className="text-slate-400 bg-slate-900/80 px-2 py-1 rounded-lg border border-slate-700 font-mono text-[11px]">
-                                        100% Genuine
+                                    <span className="text-slate-700 bg-white/95 px-2.5 py-1 rounded-lg border border-slate-200 font-mono text-[11px] shadow-xs">
+                                        Model: {product.model}
                                     </span>
                                 </div>
                             </div>
@@ -262,14 +249,14 @@ export default function ProductDetailPage({ params }) {
                                     </button>
                                 </div>
 
-                                {/* Direct Helpline & WhatsApp Quick Buttons */}
+                                {/* Direct Helpline & RFQ Action Buttons */}
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
                                     <button
-                                        onClick={handleWhatsApp}
-                                        className="inline-flex items-center justify-center gap-2 py-3 px-4 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs sm:text-sm rounded-xl shadow-sm transition"
+                                        onClick={() => setQuickQuoteProduct(product)}
+                                        className="inline-flex items-center justify-center gap-2 py-3 px-4 bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs sm:text-sm rounded-xl shadow-sm transition"
                                     >
-                                        <MessageCircle className="w-4 h-4 fill-white" />
-                                        WhatsApp Enquiry
+                                        <FileText className="w-4 h-4 text-cyan-300" />
+                                        Request Price Quote
                                     </button>
 
                                     <a
@@ -570,7 +557,7 @@ export default function ProductDetailPage({ params }) {
                         </div>
 
                         <p className="text-xs text-slate-600">
-                            Technical datasheet for <strong className="text-slate-900">{product.name}</strong> is available for download or immediate delivery via WhatsApp / Email.
+                            Technical datasheet for <strong className="text-slate-900">{product.name}</strong> is available for download or immediate delivery via Email / Portal.
                         </p>
 
                         <div className="p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs space-y-1">
@@ -586,15 +573,18 @@ export default function ProductDetailPage({ params }) {
                                     window.print();
                                     setIsBrochureModalOpen(false);
                                 }}
-                                className="flex-1 py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs rounded-xl shadow-xs"
+                                className="flex-1 py-2.5 bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs rounded-xl shadow-xs"
                             >
                                 Print / Save Spec Sheet
                             </button>
                             <button
-                                onClick={handleWhatsApp}
-                                className="flex-1 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs rounded-xl shadow-xs flex items-center justify-center gap-1.5"
+                                onClick={() => {
+                                    setIsBrochureModalOpen(false);
+                                    setQuickQuoteProduct(product);
+                                }}
+                                className="flex-1 py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs rounded-xl shadow-xs flex items-center justify-center gap-1.5"
                             >
-                                <MessageCircle className="w-3.5 h-3.5" /> Request on WhatsApp
+                                <FileText className="w-3.5 h-3.5" /> Request Price Quote
                             </button>
                         </div>
                     </div>

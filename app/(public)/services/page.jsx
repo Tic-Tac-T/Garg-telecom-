@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import {
-    Wrench,
+    Truck,
     Server,
     Camera,
     Cable,
@@ -49,16 +49,16 @@ export default function ServicesPage() {
                 {/* Section Header */}
                 <div className="text-center max-w-3xl mx-auto mb-16">
                     <span className="text-xs font-bold uppercase tracking-wider text-blue-700 bg-blue-50 border border-blue-200/80 px-3 py-1 rounded-full">
-                        Hardware Supply & Technical Deployment
+                        Hardware Supply & Wholesale Distribution
                     </span>
                     <h1 className="text-3xl sm:text-4xl font-black text-slate-900 mt-2">
-                        Our Telecom & Networking Services
+                        B2B Supply & Hardware Distribution Services
                     </h1>
                     <p className="text-sm sm:text-base text-slate-600 mt-3 leading-relaxed">
-                        Beyond equipment sales, Garg Telecom assists clients with structured cabling planning, enterprise equipment sizing, B2B procurement, and on-site technician coordination across Delhi-NCR.
+                        Garg Telecom Pvt. Ltd. is an authorized wholesale distributor and stockist. We supply certified networking switches, enterprise Wi-Fi, CCTV surveillance cameras, solid copper cabling, and server rack infrastructure.
                     </p>
-                    <p className="text-xs text-slate-400 mt-2 italic">
-                        * Note: Installation and technical support services may be available depending on project requirements and site location.
+                    <p className="text-xs text-slate-500 mt-2 font-medium">
+                        * Note: Garg Telecom is purely an equipment sales and hardware distribution firm. We do not provide on-site installation or field technician labor.
                     </p>
                 </div>
 
@@ -105,15 +105,13 @@ export default function ServicesPage() {
                             </div>
 
                             <div className="pt-6 mt-6 border-t border-slate-100 flex items-center justify-between gap-3">
-                                <a
-                                    href={COMPANY_INFO.contact.whatsappUrl}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-700 hover:text-emerald-800"
+                                <Link
+                                    href="/contact"
+                                    className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-700 hover:text-blue-600"
                                 >
-                                    <MessageCircle className="w-3.5 h-3.5 fill-emerald-600 text-emerald-600" />
-                                    WhatsApp Consultation
-                                </a>
+                                    <Phone className="w-3.5 h-3.5 text-blue-600" />
+                                    Contact Support
+                                </Link>
 
                                 <Link
                                     href="/quote"
@@ -131,13 +129,13 @@ export default function ServicesPage() {
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                         <div className="lg:col-span-6 space-y-4">
                             <span className="text-xs font-bold uppercase tracking-wider text-cyan-400 bg-cyan-950/80 px-3 py-1 rounded-full border border-cyan-800/40">
-                                Pre-Sales Engineering Desk
+                                Pre-Sales Equipment Sizing
                             </span>
                             <h3 className="text-2xl sm:text-3xl font-black text-white leading-tight">
-                                Discuss Your Technical Project With Our Team
+                                Get a Wholesale Equipment Quote for Your Project
                             </h3>
                             <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-                                Share your building layout, camera counts, or network switch requirements. We provide free pre-sales equipment sizing, budget estimates, and technician availability across Delhi-NCR.
+                                Share your bill of materials (BOM), camera counts, or network switch requirements. We provide free pre-sales equipment sizing, wholesale contractor rates, and express dispatch options.
                             </p>
 
                             <div className="space-y-2 pt-2 text-xs text-slate-300">
@@ -162,7 +160,7 @@ export default function ServicesPage() {
                                     </div>
                                     <h4 className="text-lg font-bold text-white">Inquiry Received!</h4>
                                     <p className="text-xs text-slate-300 max-w-sm mx-auto">
-                                        Our Karol Bagh engineering coordinator will reach out to you at {serviceFormData.phone}.
+                                        Our Karol Bagh sales desk will reach out to you at {serviceFormData.phone}.
                                     </p>
                                 </div>
                             ) : (
@@ -234,7 +232,7 @@ export default function ServicesPage() {
                                         type="submit"
                                         className="w-full py-3 bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs sm:text-sm rounded-xl transition shadow-md flex items-center justify-center gap-2"
                                     >
-                                        <Send className="w-3.5 h-3.5" /> Submit Service Inquiry
+                                        <Send className="w-3.5 h-3.5" /> Submit Equipment Inquiry
                                     </button>
                                 </form>
                             )}

@@ -36,7 +36,7 @@ export function QuoteProvider({ children }) {
                         email: "vikas@nexusit.in",
                         location: "Connaught Place, New Delhi",
                         status: "Quoted",
-                        notes: "Need urgent delivery by tomorrow evening for client installation.",
+                        notes: "Need urgent delivery by tomorrow evening for client project deployment.",
                         items: [
                             { name: "Cisco CBS110-24T-EU 24-Port Gigabit Unmanaged Switch", quantity: 2, model: "CBS110-24T-EU" },
                             { name: "D-Link CAT6 UTP 305-Meter 100% Solid Annealed Bare Copper Cable", quantity: 4, model: "NCB-C6UBLUR-305" },
@@ -66,15 +66,14 @@ export function QuoteProvider({ children }) {
                         date: new Date(Date.now() - 86400000 * 4).toISOString(),
                         customerName: "Dr. Ananya Roy",
                         companyName: "Roy Diagnostics & Polyclinic",
-                        gstin: "",
                         phone: "+91 99100 44556",
                         email: "contact@roydoctors.org",
                         location: "Paharganj, New Delhi",
                         status: "New",
-                        notes: "Setting up intercom across 12 consulting rooms and reception.",
+                        notes: "Upgrading clinic Wi-Fi access points and waiting area CCTV coverage.",
                         items: [
-                            { name: "Panasonic KX-TES824 Advanced Hybrid PBX / Intercom System", quantity: 1, model: "KX-TES824" },
-                            { name: "Beetel M71 Caller ID Display Corded Landline Telephone", quantity: 12, model: "M71" }
+                            { name: "TP-Link Omada EAP225 AC1350 Dual-Band Wireless Gigabit Access Point", quantity: 3, model: "EAP225" },
+                            { name: "Hikvision 4MP Smart Wi-Fi Dome Security Camera", quantity: 4, model: "DS-2CD1143G0-I" }
                         ]
                     }
                 ];

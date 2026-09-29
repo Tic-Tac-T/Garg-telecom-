@@ -10,7 +10,7 @@ import {
     UserCheck,
     Building2,
     ShieldCheck,
-    MessageCircle,
+    FileText,
     ArrowRight
 } from 'lucide-react';
 import { COMPANY_INFO } from '@/data/company';
@@ -37,7 +37,7 @@ export default function KarolBaghSpotlight() {
                             </h2>
 
                             <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
-                                Operated under the leadership of <strong className="text-white">{COMPANY_INFO.owner}</strong>, Garg Telecom brings decades of deep vendor relationships in Delhi’s premier electronics and telecom market directly to your business.
+                                Under the strategic leadership of <strong className="text-white">{COMPANY_INFO.owner}</strong>, <strong className="text-white">Garg Telecom Pvt. Ltd.</strong> operates as a registered corporate telecom distributor and system integrator, bringing decades of deep vendor relationships in Delhi’s premier electronics and communications market directly to your projects.
                             </p>
 
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
@@ -69,15 +69,13 @@ export default function KarolBaghSpotlight() {
                                 >
                                     Learn More About Us <ArrowRight className="w-4 h-4" />
                                 </Link>
-                                <a
-                                    href={COMPANY_INFO.contact.whatsappUrl}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="px-5 py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs sm:text-sm rounded-xl transition shadow-md flex items-center gap-2"
+                                <Link
+                                    href="/quote"
+                                    className="px-5 py-3 bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs sm:text-sm rounded-xl transition border border-slate-700 shadow-md flex items-center gap-2"
                                 >
-                                    <MessageCircle className="w-4 h-4 fill-white" />
-                                    Direct WhatsApp Consultation
-                                </a>
+                                    <FileText className="w-4 h-4 text-cyan-400" />
+                                    Request Equipment RFQ
+                                </Link>
                             </div>
                         </div>
 

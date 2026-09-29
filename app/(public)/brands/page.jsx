@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { ShieldCheck, ArrowRight, CheckCircle2, Search } from 'lucide-react';
 import { BRANDS } from '@/data/brands';
 import { PRODUCTS } from '@/data/products';
+import BrandLogoBadge from '@/components/BrandLogoBadge';
 
 export default function BrandsPage() {
     const [search, setSearch] = useState('');
@@ -56,8 +57,8 @@ export default function BrandsPage() {
                             >
                                 <div className="space-y-4">
                                     <div className="flex items-center justify-between">
-                                        <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-slate-900 to-blue-950 text-white flex items-center justify-center font-black text-lg shadow-sm border border-slate-700/30">
-                                            {brand.name.slice(0, 2).toUpperCase()}
+                                        <div className="w-36">
+                                            <BrandLogoBadge brandId={brand.id} name={brand.name} accentColor={brand.accentColor} className="h-11 w-full" />
                                         </div>
                                         <span className="text-xs font-mono font-bold text-blue-700 bg-blue-50 px-2.5 py-1 rounded-full">
                                             {productCount} Listed SKUs
@@ -124,7 +125,7 @@ export default function BrandsPage() {
                 <div className="p-6 bg-slate-100/80 rounded-2xl border border-slate-200 text-center text-xs text-slate-500 max-w-3xl mx-auto">
                     <ShieldCheck className="w-6 h-6 text-slate-400 mx-auto mb-2" />
                     <p className="leading-relaxed">
-                        Garg Telecom is an independent distributor and dealer supplying genuine products from verified manufacturer supply channels. All logos and product names are registered trademarks of their respective companies.
+                        Garg Telecom Pvt. Ltd. is an authorized enterprise distributor and dealer supplying genuine products from verified manufacturer supply channels. All logos and product names are registered trademarks of their respective companies.
                     </p>
                 </div>
             </div>

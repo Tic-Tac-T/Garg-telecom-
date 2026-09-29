@@ -1,7 +1,8 @@
 'use client';
 
 import React, { useState } from 'react';
-import { X, CheckCircle2, MessageCircle, Phone, FileText, Send, Building2, User, Mail, MapPin } from 'lucide-react';
+import Link from 'next/link';
+import { X, CheckCircle2, Phone, FileText, Send, Building2, User, Mail, MapPin } from 'lucide-react';
 import { useQuote } from '@/context/QuoteContext';
 import { COMPANY_INFO } from '@/data/company';
 import toast from 'react-hot-toast';
@@ -50,42 +51,23 @@ export default function QuickQuoteModal() {
         }, 500);
     };
 
-    const generateWhatsAppUrl = () => {
-        if (!submittedQuote && !quickQuoteProduct) return COMPANY_INFO.contact.whatsappUrl;
-
-        const quoteRef = submittedQuote ? submittedQuote.id : 'Direct Inquiry';
-        const clientName = formData.name || 'Customer';
-        const company = formData.companyName ? ` (${formData.companyName})` : '';
-
-        const text = `*New Quotation Request - Garg Telecom*%0A` +
-            `*Ref:* ${quoteRef}%0A` +
-            `*Client:* ${clientName}${company}%0A` +
-            `*Phone:* ${formData.phone}%0A` +
-            `*Location:* ${formData.location || 'Delhi-NCR'}%0A` +
-            `----------------------------------%0A` +
-            `*Item:* ${quickQuoteProduct.name}%0A` +
-            `*Model:* ${quickQuoteProduct.model} (${quickQuoteProduct.brand})%0A` +
-            `*Qty:* ${quantity} Units%0A` +
-            `*Indicative Price:* ${quickQuoteProduct.priceDisplay}%0A` +
-            (formData.notes ? `*Notes:* ${formData.notes}%0A` : '') +
-            `----------------------------------%0A` +
-            `Please share the best discounted B2B quote with GST invoice and delivery timeline.`;
-
-        return `https://wa.me/${COMPANY_INFO.contact.phoneRaw.replace(/[^0-9]/g, '')}?text=${text}`;
-    };
-
     return (
         <div className="fixed inset-0 z-50 overflow-y-auto bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-4">
             <div className="relative w-full max-w-xl bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden my-6 animate-fadeIn">
                 {/* Header */}
                 <div className="px-6 py-4 bg-gradient-to-r from-slate-900 to-blue-950 text-white flex items-center justify-between">
-                    <div>
-                        <span className="text-xs uppercase tracking-wider text-blue-300 font-semibold">
-                            Garg Telecom – Request Quotation
-                        </span>
-                        <h3 className="text-lg font-bold text-white mt-0.5">
-                            {submittedQuote ? "Quotation Request Submitted!" : "Instant B2B Price Quotation"}
-                        </h3>
+                    <div className="flex items-center gap-3">
+                        <div className="bg-white p-1 rounded-lg shadow-xs">
+                            <img src="/garg-telecom-icon.png" alt="Garg Telecom" className="h-7 w-auto object-contain" />
+                        </div>
+                        <div>
+                            <span className="text-[11px] uppercase tracking-wider text-blue-300 font-semibold block">
+                                Garg Telecom Pvt. Ltd. • Corporate RFQ Desk
+                            </span>
+                            <h3 className="text-base sm:text-lg font-bold text-white mt-0.5">
+                                {submittedQuote ? "Quotation Request Submitted!" : "Instant B2B Price Quotation"}
+                            </h3>
+                        </div>
                     </div>
                     <button
                         onClick={handleClose}
@@ -135,15 +117,14 @@ export default function QuickQuoteModal() {
 
                         {/* Direct Actions */}
                         <div className="flex flex-col sm:flex-row gap-3 pt-2">
-                            <a
-                                href={generateWhatsAppUrl()}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="flex-1 inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-3 px-4 rounded-xl transition shadow-md"
+                            <Link
+                                href="/quote"
+                                onClick={handleClose}
+                                className="flex-1 inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-xl transition shadow-md"
                             >
-                                <MessageCircle className="w-4 h-4 fill-white" />
-                                Send via WhatsApp Now
-                            </a>
+                                <FileText className="w-4 h-4 text-cyan-300" />
+                                View in Full RFQ Portal
+                            </Link>
                             <a
                                 href={`tel:${COMPANY_INFO.contact.phoneRaw}`}
                                 className="inline-flex items-center justify-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold py-3 px-4 rounded-xl transition border border-slate-300"
@@ -309,7 +290,7 @@ export default function QuickQuoteModal() {
                             </label>
                             <textarea
                                 rows={2}
-                                placeholder="E.g. Need with 2 rolls of CAT6 cable and RJ45 clips, need on-site installation guidance, etc."
+                                placeholder="E.g. Need with 2 rolls of CAT6 cable and RJ45 clips, express delivery timeline, etc."
                                 value={formData.notes}
                                 onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
                                 className="w-full text-xs p-2.5 bg-slate-50 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white"

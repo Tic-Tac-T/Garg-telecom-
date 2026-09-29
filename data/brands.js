@@ -30,9 +30,9 @@ export const BRANDS = [
         id: "hikvision",
         name: "Hikvision",
         tagline: "World's Leading Video Surveillance & Security Solutions",
-        description: "High-definition AcuSense IP cameras, 4K NVRs, HD Analog cameras, video door phones, and surveillance access control.",
-        categories: ["CCTV & IP Cameras", "DVR & NVR Systems", "Intercom & EPABX Systems"],
-        popularProducts: ["DS-2CD2043G2-I 4MP Bullet", "DS-7608NI-Q1 8CH 4K NVR", "DS-KIS603-P IP Video Door Phone"],
+        description: "High-definition AcuSense IP cameras, 4K NVRs, HD Analog cameras, smart perimeter security, and surveillance access control.",
+        categories: ["CCTV & IP Cameras", "DVR & NVR Systems"],
+        popularProducts: ["DS-2CD2043G2-I 4MP Bullet", "DS-7608NI-Q1 8CH 4K NVR", "DS-2CD1143G0-I 4MP Dome"],
         accentColor: "#d91f26"
     },
     {
@@ -72,13 +72,13 @@ export const BRANDS = [
         accentColor: "#3d1152"
     },
     {
-        id: "panasonic",
-        name: "Panasonic",
-        tagline: "Telecom EPABX, Intercoms & Video Phones",
-        description: "Industry gold-standard hybrid telephone systems, office EPABX exchanges, and color video door phone intercoms.",
-        categories: ["Intercom & EPABX Systems"],
-        popularProducts: ["KX-TES824 Advanced Hybrid PBX", "VL-SV74 Video Intercom System", "KX-TS500 Corded Phone"],
-        accentColor: "#003b93"
+        id: "mikrotik",
+        name: "MikroTik",
+        tagline: "High-Performance Routers & Wireless ISP Systems",
+        description: "Carrier-grade RouterOS routers, high-capacity Gigabit switches, and long-range outdoor wireless systems for demanding enterprise IT networks.",
+        categories: ["Routers & Wi-Fi", "Network Switches"],
+        popularProducts: ["hEX S Gigabit Router", "Cloud Router Switch CRS326", "RouterBOARD Series"],
+        accentColor: "#d32f2f"
     },
     {
         id: "western-digital",
@@ -99,13 +99,13 @@ export const BRANDS = [
         accentColor: "#e65100"
     },
     {
-        id: "grandstream",
-        name: "Grandstream",
-        tagline: "Enterprise IP Telephony & VoIP Phones",
-        description: "Award-winning SIP IP phones, IP PBX telephone appliances, and enterprise voice communication hardware.",
-        categories: ["Intercom & EPABX Systems"],
-        popularProducts: ["GXP1625 HD IP Phone", "UCM6202 IP PBX Appliance"],
-        accentColor: "#1d589e"
+        id: "seagate",
+        name: "Seagate",
+        tagline: "SkyHawk 24/7 Surveillance & Enterprise Storage",
+        description: "Industry-leading SkyHawk surveillance hard drives optimized for DVRs/NVRs with ImagePerfect firmware for smooth 24/7 video recording.",
+        categories: ["Surveillance Storage (HDDs)"],
+        popularProducts: ["SkyHawk 2TB Surveillance Drive", "SkyHawk 4TB Surveillance Drive", "IronWolf NAS Storage"],
+        accentColor: "#00a651"
     },
     {
         id: "digilink",

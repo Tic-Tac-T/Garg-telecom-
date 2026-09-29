@@ -21,7 +21,7 @@ export const SOLUTIONS = [
             "Mount 6U wall rack at a secure, well-ventilated central location.",
             "Run CAT6 solid copper cables through PVC conduits along perimeter walls to modular faceplates.",
             "Punch cables into 24-port patch panel and dress using horizontal cable managers.",
-            "Install Gigabit switch, connect broadband fiber modem to router WAN, and assign static IP pools.",
+            "Connect Gigabit switch, hook broadband fiber modem to router WAN, and assign static IP pools.",
             "Verify link speeds across all desk ports with digital LAN testers."
         ],
         benefits: [
@@ -51,7 +51,7 @@ export const SOLUTIONS = [
         ],
         implementationSteps: [
             "Pinpoint critical surveillance zones: Cash register cash-drawer, customer billing counter, main glass door, and storage backroom.",
-            "Install discreet dome cameras flush with the false ceiling for an aesthetically pleasing retail interior.",
+            "Mount discreet dome cameras flush with the false ceiling for an aesthetically pleasing retail interior.",
             "Run single CAT6 cables to each camera utilizing Power over Ethernet (no separate power adapters needed at cameras).",
             "Connect all camera cables to the central PoE switch and NVR in the manager's office.",
             "Configure motion detection zones, email alerts, and the Hik-Connect mobile app on the owner's smartphone for 24/7 live monitoring from anywhere."
@@ -82,7 +82,7 @@ export const SOLUTIONS = [
         ],
         implementationSteps: [
             "Formulate IP subnet scheme and VLAN topology (VLAN 10: Management, VLAN 20: Corporate Data, VLAN 30: VoIP Phones, VLAN 40: CCTV, VLAN 50: Guest Wi-Fi).",
-            "Install primary 24U server rack in ground floor data room and secondary 9U distribution racks on upper floors.",
+            "Position primary 24U server rack in ground floor data room and secondary 9U distribution racks on upper floors.",
             "Pull fiber optic backbone cables between floor racks through dedicated risers and terminate with LC duplex couplers.",
             "Configure 802.1Q VLAN tagging and Quality of Service (QoS) prioritization for voice and video traffic on Cisco switches.",
             "Document cable drop patch chart and provide as-built network diagram."
@@ -113,7 +113,7 @@ export const SOLUTIONS = [
         ],
         implementationSteps: [
             "Survey yard perimeter, loading docks, container bays, and material entry/exit gates.",
-            "Install weatherproof GI/PVC conduit piping along warehouse steel beams to prevent rodent damage.",
+            "Route weatherproof GI/PVC conduit piping along warehouse steel beams to prevent rodent damage.",
             "Mount cameras inside IP66 weatherproof die-cast junction boxes with lightning surge protectors.",
             "Utilize Extended PoE switches to drive power and video signals over 200 meters without mid-span repeaters.",
             "Set up virtual tripwire intrusion zones and vehicle license plate capture protocols on the NVR."
@@ -132,7 +132,7 @@ export const SOLUTIONS = [
         category: "Education & Public",
         badge: "High Density",
         shortDesc: "High-density student Wi-Fi, computer lab cabling, PA system integration, and campus-wide safety surveillance.",
-        problem: "Educational institutions require dense simultaneous Wi-Fi connectivity for classrooms, auditorium halls, and libraries, along with strict student content filtering, centralized intercom announcements, and campus-wide perimeter safety surveillance.",
+        problem: "Educational institutions require dense simultaneous Wi-Fi connectivity for classrooms, auditorium halls, and libraries, along with strict student content filtering, centralized network management, and campus-wide perimeter safety surveillance.",
         recommendedSetup: "Centrally managed ceiling access points with captive guest portals, dedicated Gigabit cabling for 60+ computer lab terminals, high-power PoE infrastructure, and high-channel IP cameras monitoring corridors, sports grounds, and gates.",
         equipmentList: [
             { item: "Campus Wi-Fi APs", model: "Ubiquiti UniFi 6 Long-Range (U6-LR) / TP-Link Omada EAP225" },
@@ -144,7 +144,7 @@ export const SOLUTIONS = [
         ],
         implementationSteps: [
             "Compute peak simultaneous concurrent device density for auditorium and lecture halls.",
-            "Install Omada/UniFi ceiling access points uniformly spaced across corridors and open halls.",
+            "Mount Omada/UniFi ceiling access points uniformly spaced across corridors and open halls.",
             "Terminate all computer lab desks to central 24-port patch panels inside a locked teacher cabinet.",
             "Enable Band Steering, Guest Network Isolation, and Web Content Filtering on the gateway.",
             "Deploy corridor dome cameras with wide dynamic range to handle contrasting outdoor daylight."
@@ -157,34 +157,34 @@ export const SOLUTIONS = [
         ]
     },
     {
-        id: "office-communication-systems",
-        slug: "office-communication-systems",
-        title: "Office EPABX & Intercom Telephony",
-        category: "Voice & Communication",
-        badge: "Telephony",
-        shortDesc: "Panasonic hybrid telephone exchanges, digital key phones, departmental intercoms, and video gatekeeper systems.",
-        problem: "Front-desk receptionists struggle to route incoming customer telephone calls to appropriate departments, while employees waste productive time walking between desks or incurring external phone charges for internal consultations.",
-        recommendedSetup: "A robust Panasonic or Matrix hybrid EPABX system supporting 3 to 8 incoming telecom lines (CO) and 8 to 24 internal intercom extensions, paired with Beetel caller ID display phones, a master receptionist console, and video door phone at the reception door.",
+        id: "optical-fiber-data-backbone",
+        slug: "optical-fiber-data-backbone",
+        title: "Enterprise Optical Fiber & Data Backbone",
+        category: "Fiber & Core Infrastructure",
+        badge: "High Throughput",
+        shortDesc: "High-throughput single-mode fiber links, SFP transceivers, fiber patch cords, and optical termination enclosures.",
+        problem: "Multi-building commercial compounds and high-load IT facilities suffer from bandwidth bottlenecks, electromagnetic interference, and severe distance limitations when relying solely on traditional copper cabling.",
+        recommendedSetup: "A high-speed fiber optic backbone utilizing single-mode armored fiber cables, 10G/1G SFP+ optical transceivers, 24-Port rackmount fiber LIUs, and LC-LC duplex armored patch cords linking core switches directly to server clusters.",
         equipmentList: [
-            { item: "Central Hybrid EPABX", model: "Panasonic KX-TES824 Advanced Hybrid Phone System (3 CO / 8 Ext)" },
-            { item: "Master Reception Console", model: "Panasonic KX-T7730 Proprietary Master Display Key Phone" },
-            { item: "Department Extension Handsets", model: "Beetel M71 Caller ID Display Corded Telephones (x8 to x16)" },
-            { item: "Reception Video Door Phone", model: "Panasonic VL-SV74 Video Intercom with 7-inch Color Screen" },
-            { item: "Intercom Cabling", model: "Delton / D-Link 2-Pair & 4-Pair Pure Copper Telecom Cable" },
-            { item: "MDF & Distribution", model: "Krone Type MDF Connection Block & Protective Enclosure" }
+            { item: "Fiber Transceivers", model: "Cisco & D-Link 1G / 10G SFP+ Optical Transceiver Modules" },
+            { item: "Fiber LIU Enclosure", model: "D-Link 24-Port Rackmount Light Interface Unit (LIU)" },
+            { item: "Fiber Patch Cords", model: "D-Link LC-LC / SC-LC Duplex Single-Mode Armored Patch Cables" },
+            { item: "Backbone Cable", model: "6-Core / 12-Core Armored Outdoor Single-Mode Optical Fiber Cable" },
+            { item: "Fiber Splicing Trays", model: "High-Precision Fusion Splicing Trays & Protection Sleeves" },
+            { item: "Core Managed Switch", model: "Cisco CBS250-24P-4G with Dedicated SFP Uplinks" }
         ],
         implementationSteps: [
-            "Identify extension numbers for Reception (Ext 101), Accounts (Ext 102), Sales (Ext 103), and Director Cabin (Ext 104).",
-            "Mount Panasonic KX-TES824 PBX controller in a dry, ventilated electrical utility cabinet.",
-            "Run 2-pair copper telephone wiring to each desk and terminate with modular RJ11 telephone rosettes.",
-            "Program incoming call routing logic: Auto-receptionist DISA greeting, ring groups, and night-mode diversion.",
-            "Mount video door phone camera station outside the main glass entrance with internal electronic door-strike control."
+            "Route armored fiber cables through designated underground conduits or utility risers.",
+            "Mount 24-port rackmount LIUs at central and distribution server racks.",
+            "Perform precision fusion splicing of individual fiber strands with low-loss protection sleeves.",
+            "Verify optical power loss with calibrated OTDR and optical power meters.",
+            "Connect SFP optical transceivers and link core switches across multi-floor spans."
         ],
         benefits: [
-            "Professional automated greeting for all incoming customer phone calls",
-            "Free, instantaneous inter-department voice communication",
-            "Visual verification of visitors before buzzing open the main entrance door",
-            "Expandable up to 24 extensions as business headcount expands"
+            "Immunity to electrical interference and lightning surges",
+            "Ultra-high data throughput exceeding 10 Gbps across long distances",
+            "Future-proof backbone for next-generation data center expansions",
+            "Negligible latency for real-time mission-critical applications"
         ]
     },
     {
@@ -195,19 +195,19 @@ export const SOLUTIONS = [
         badge: "Smart Living",
         shortDesc: "Eliminate Wi-Fi dead zones across thick concrete floors, power smart TVs, gaming consoles, and home security.",
         problem: "Modern multi-story Indian houses have thick RCC concrete slabs and brick walls that severely degrade Wi-Fi signals from a single ISP router, causing buffering on 4K Smart TVs, laggy work-from-home video meetings, and offline smart home IoT devices.",
-        recommendedSetup: "A high-speed seamless Mesh Wi-Fi network or hardwired CAT6 access points on every floor connected back to a central Gigabit switch in the utility box, combined with an IP video door phone kit for gate security.",
+        recommendedSetup: "A high-speed seamless Mesh Wi-Fi network or hardwired CAT6 access points on every floor connected back to a central Gigabit switch in the utility box, combined with ultra-clear perimeter IP cameras for home security.",
         equipmentList: [
             { item: "Mesh Wi-Fi 6 System", model: "TP-Link Deco X50 AX3000 Whole Home Mesh (Pack of 3)" },
             { item: "Core Distribution Switch", model: "D-Link DGS-1008P 8-Port Gigabit PoE Switch" },
-            { item: "Home Security Intercom", model: "Hikvision DS-KIS603-P IP Video Door Phone with Mobile App" },
+            { item: "Perimeter Security Camera", model: "Hikvision 4MP Smart Wi-Fi PTZ Surveillance Camera with Mobile App" },
             { item: "Backbone Cabling", model: "D-Link CAT6 Solid Bare Copper Cable (100-300m)" },
             { item: "Smart TV Drops", model: "Direct CAT6 wired connections for 4K streaming & gaming" }
         ],
         implementationSteps: [
             "Position central Wi-Fi nodes on Ground, First, and Second floors with wired Ethernet backhauls.",
             "Wire high-bandwidth devices (Smart TVs, gaming rigs, home office desktop) directly to CAT6 ports.",
-            "Mount outdoor doorbell camera at main gate and touch-display monitor inside the family living hall.",
-            "Link mobile apps so family members can answer gate visitors and view home CCTV cameras on their phones."
+            "Mount outdoor weather-resistant cameras covering the main driveway, terrace, and main entrance.",
+            "Link mobile apps so family members can receive instant motion alerts and view live home CCTV feeds anytime."
         ],
         benefits: [
             "Zero Wi-Fi dead zones across all floors, balconies, and terrace gardens",

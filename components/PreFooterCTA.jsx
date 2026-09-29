@@ -42,15 +42,13 @@ export default function PreFooterCTA() {
                             Contact Us
                         </Link>
 
-                        <a
-                            href={COMPANY_INFO.contact.whatsappUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm sm:text-base rounded-xl shadow-md transition duration-200"
+                        <Link
+                            href="/products"
+                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-slate-800 hover:bg-slate-700 text-white font-bold text-sm sm:text-base rounded-xl border border-slate-700 transition duration-200"
                         >
-                            <MessageCircle className="w-4 h-4 fill-white" />
-                            WhatsApp Us
-                        </a>
+                            <ArrowRight className="w-4 h-4 text-cyan-400" />
+                            Browse Catalog
+                        </Link>
                     </div>
 
                     <div className="pt-6 text-xs text-slate-400 flex items-center justify-center gap-4 flex-wrap">

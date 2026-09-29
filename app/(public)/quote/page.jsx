@@ -78,32 +78,6 @@ export default function QuotePage() {
         window.print();
     };
 
-    const generateWhatsAppUrl = () => {
-        if (!submittedQuote) return COMPANY_INFO.contact.whatsappUrl;
-
-        let itemListText = '';
-        submittedQuote.items.forEach((it, idx) => {
-            itemListText += `%0A${idx + 1}. *${it.name}* (Qty: ${it.quantity}) - Model: ${it.model}`;
-        });
-
-        const text = `*OFFICIAL B2B QUOTATION REQUEST*%0A` +
-            `*Ref No:* ${submittedQuote.id}%0A` +
-            `*Date:* ${new Date(submittedQuote.date).toLocaleDateString('en-IN')}%0A` +
-            `----------------------------------%0A` +
-            `*Customer:* ${submittedQuote.customerName}%0A` +
-            `*Company:* ${submittedQuote.companyName || 'N/A'}%0A` +
-            `*GSTIN:* ${submittedQuote.gstin || 'Not Provided'}%0A` +
-            `*Phone:* ${submittedQuote.phone}%0A` +
-            `*Delivery City:* ${submittedQuote.location || 'Delhi-NCR'}%0A` +
-            `----------------------------------%0A` +
-            `*REQUESTED EQUIPMENT:*${itemListText}%0A` +
-            (submittedQuote.notes ? `%0A*Project Notes:* ${submittedQuote.notes}%0A` : '') +
-            `----------------------------------%0A` +
-            `Please share official PDF quotation with HSN codes, GST breakdown, and dispatch timeline.`;
-
-        return `https://wa.me/${COMPANY_INFO.contact.phoneRaw.replace(/[^0-9]/g, '')}?text=${text}`;
-    };
-
     return (
         <div className="bg-slate-50 min-h-screen py-10 sm:py-16">
             <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -145,14 +119,12 @@ export default function QuotePage() {
                                 >
                                     <Printer className="w-3.5 h-3.5" /> Print / Save PDF
                                 </button>
-                                <a
-                                    href={generateWhatsAppUrl()}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="px-4 py-2 bg-emerald-600 hover:bg-emerald-500 text-white rounded-xl text-xs font-bold transition flex items-center gap-1.5 shadow-md"
+                                <Link
+                                    href="/products"
+                                    className="px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-xl text-xs font-bold transition flex items-center gap-1.5 shadow-md"
                                 >
-                                    <MessageCircle className="w-3.5 h-3.5 fill-white" /> Send on WhatsApp
-                                </a>
+                                    <ArrowRight className="w-3.5 h-3.5" /> Browse More Equipment
+                                </Link>
                             </div>
                         </div>
 
@@ -514,7 +486,7 @@ export default function QuotePage() {
                                     </label>
                                     <textarea
                                         rows={2}
-                                        placeholder="Any specific delivery instructions, installation guidance, or warranty requirements..."
+                                        placeholder="Any specific delivery instructions, billing details, or warranty requirements..."
                                         value={formData.notes}
                                         onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
                                         className="w-full text-xs p-2.5 bg-slate-50 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"

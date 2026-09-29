@@ -32,33 +32,34 @@ export default function ProductCard({ product, layout = 'grid' }) {
         setQuickQuoteProduct(product);
     };
 
-    const handleWhatsApp = (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        const text = `Hello Garg Telecom, I would like to inquire about: *${product.name}* (Model: ${product.model}). Please share your best price and stock availability.`;
-        window.open(`https://wa.me/${COMPANY_INFO.contact.phoneRaw.replace(/[^0-9]/g, '')}?text=${encodeURIComponent(text)}`, '_blank');
-    };
-
     if (layout === 'list') {
         return (
             <div className="bg-white rounded-2xl border border-slate-200 hover:border-blue-400 p-4 sm:p-5 shadow-xs hover:shadow-lg transition-all duration-300 flex flex-col md:flex-row items-start md:items-center justify-between gap-5 group">
                 {/* Visual Thumbnail */}
                 <div className="flex items-center gap-4 min-w-0 flex-1">
-                    <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-xl bg-slate-100 border border-slate-200 p-2 flex items-center justify-center flex-shrink-0 relative overflow-hidden group-hover:scale-105 transition-transform duration-300">
-                        <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-slate-900 to-blue-950 text-white flex flex-col items-center justify-center text-center p-1 shadow-sm">
-                            <span className="text-[10px] font-bold uppercase tracking-wider text-cyan-400 font-mono">
-                                {product.brand}
-                            </span>
-                            <span className="text-[9px] text-slate-300 truncate font-mono mt-0.5 max-w-[55px]">
-                                {product.model}
-                            </span>
-                        </div>
+                    <Link
+                        href={`/products/${product.slug}`}
+                        className="w-24 h-24 sm:w-28 sm:h-28 rounded-xl bg-slate-50 border border-slate-200 p-1 flex items-center justify-center flex-shrink-0 relative overflow-hidden group-hover:scale-105 transition-transform duration-300 block"
+                    >
+                        {product.imageUrl ? (
+                            <img
+                                src={product.imageUrl}
+                                alt={product.name}
+                                className="w-full h-full object-cover rounded-lg"
+                            />
+                        ) : (
+                            <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-slate-900 to-blue-950 text-white flex flex-col items-center justify-center text-center p-1 shadow-sm">
+                                <span className="text-[10px] font-bold uppercase tracking-wider text-cyan-400 font-mono">
+                                    {product.brand}
+                                </span>
+                            </div>
+                        )}
                         {product.badge && (
                             <span className="absolute top-1 left-1 text-[9px] font-bold bg-blue-600 text-white px-1.5 py-0.5 rounded shadow-xs">
                                 {product.badge}
                             </span>
                         )}
-                    </div>
+                    </Link>
 
                     {/* Details */}
                     <div className="min-w-0 space-y-1.5">
@@ -171,30 +172,36 @@ export default function ProductCard({ product, layout = 'grid' }) {
             </div>
 
             {/* Visual Presentation */}
-            <div className="px-4 py-4 flex items-center justify-center">
-                <div className="w-full h-44 rounded-xl bg-gradient-to-br from-slate-50 to-slate-100/80 border border-slate-100 flex flex-col items-center justify-center p-4 relative overflow-hidden group-hover:scale-102 transition-transform duration-300">
-                    {/* Visual Graphic Representation */}
-                    <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 text-white flex flex-col items-center justify-center p-2 shadow-md border border-slate-700/30 group-hover:border-blue-500/50 transition">
-                        <span className="text-xs font-black tracking-wider text-cyan-400 font-mono">
-                            {product.brand.toUpperCase()}
-                        </span>
-                        <div className="w-10 h-0.5 bg-blue-500/50 my-1 rounded-full"></div>
-                        <span className="text-[10px] font-bold text-slate-200 text-center leading-tight line-clamp-2">
-                            {product.model}
-                        </span>
-                    </div>
+            <div className="px-4 py-3 flex items-center justify-center">
+                <Link
+                    href={`/products/${product.slug}`}
+                    className="w-full h-52 rounded-xl bg-slate-100/60 border border-slate-200/70 flex items-center justify-center relative overflow-hidden group-hover:scale-[1.02] transition-transform duration-300 block"
+                >
+                    {product.imageUrl ? (
+                        <img
+                            src={product.imageUrl}
+                            alt={product.name}
+                            className="w-full h-full object-cover rounded-xl"
+                        />
+                    ) : (
+                        <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 text-white flex flex-col items-center justify-center p-2 shadow-md">
+                            <span className="text-xs font-black tracking-wider text-cyan-400 font-mono">
+                                {product.brand.toUpperCase()}
+                            </span>
+                        </div>
+                    )}
 
-                    {/* Stock pill */}
+                    {/* Stock pill overlay */}
                     <div className="absolute bottom-2 left-2 right-2 flex items-center justify-between text-[10px]">
-                        <span className="text-emerald-700 bg-white/90 backdrop-blur-xs px-2 py-0.5 rounded-md font-semibold border border-emerald-200/60 flex items-center gap-1 shadow-2xs">
-                            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                        <span className="text-emerald-700 bg-white/95 backdrop-blur-xs px-2 py-0.5 rounded-md font-semibold border border-emerald-200/60 flex items-center gap-1 shadow-xs">
+                            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
                             In Stock
                         </span>
-                        <span className="text-slate-500 font-mono font-medium bg-white/90 px-1.5 py-0.5 rounded shadow-2xs">
-                            Karol Bagh
+                        <span className="text-slate-700 font-mono font-bold bg-white/95 px-1.5 py-0.5 rounded shadow-xs text-[9px]">
+                            Karol Bagh Hub
                         </span>
                     </div>
-                </div>
+                </Link>
             </div>
 
             {/* Product Meta */}

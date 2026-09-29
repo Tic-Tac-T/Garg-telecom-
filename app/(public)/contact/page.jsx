@@ -1,12 +1,13 @@
 'use client';
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 import {
     MapPin,
     Phone,
     Mail,
     Clock,
-    MessageCircle,
+    FileText,
     Building2,
     User,
     Send,
@@ -43,14 +44,25 @@ export default function ContactPage() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Header */}
                 <div className="text-center max-w-3xl mx-auto mb-16">
-                    <span className="text-xs font-bold uppercase tracking-wider text-blue-700 bg-blue-50 border border-blue-200/80 px-3 py-1 rounded-full">
-                        Karol Bagh Sourcing Desk
-                    </span>
-                    <h1 className="text-3xl sm:text-4xl font-black text-slate-900 mt-2">
-                        Contact Garg Telecom
+                    <div className="flex justify-center mb-6">
+                        <div className="bg-white p-3 rounded-2xl shadow-sm border border-slate-200 inline-block">
+                            <img 
+                                src="/garg-telecom-logo.png" 
+                                alt="Garg Telecom Pvt. Ltd. - Telecommunications & Digital Solutions" 
+                                className="h-12 sm:h-14 w-auto object-contain" 
+                            />
+                        </div>
+                    </div>
+                    <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-blue-700 bg-blue-50 border border-blue-200/80 px-3.5 py-1 rounded-full mb-3">
+                        <span>Corporate Office & Helpdesk</span>
+                        <span>•</span>
+                        <span>Karol Bagh, New Delhi</span>
+                    </div>
+                    <h1 className="text-3xl sm:text-4xl font-black text-slate-900">
+                        Contact Garg Telecom Pvt. Ltd.
                     </h1>
                     <p className="text-sm sm:text-base text-slate-600 mt-3 leading-relaxed">
-                        Have a query regarding bulk quotations, stock availability, or project implementation? Reach out to our team in Karol Bagh, New Delhi.
+                        Have a query regarding enterprise telecom solutions, optical fiber, bulk hardware quotations, or government tenders? Connect with our dedicated sales and technical NOC desks.
                     </p>
                 </div>
 
@@ -110,22 +122,20 @@ export default function ContactPage() {
                                     <div>
                                         <strong className="text-slate-900 block text-sm">Business Working Hours:</strong>
                                         <p className="text-slate-700 mt-0.5">Monday – Saturday: 10:00 AM – 8:00 PM</p>
-                                        <p className="text-slate-500">Sunday: Closed (Inquiries via WhatsApp)</p>
+                                        <p className="text-slate-500">Sunday: Closed (Online RFQ Active)</p>
                                     </div>
                                 </div>
                             </div>
 
-                            {/* Direct WhatsApp Callout */}
+                            {/* Direct Quote Portal Callout */}
                             <div className="pt-2">
-                                <a
-                                    href={COMPANY_INFO.contact.whatsappUrl}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs sm:text-sm rounded-xl transition shadow-md"
+                                <Link
+                                    href="/quote"
+                                    className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs sm:text-sm rounded-xl transition shadow-md"
                                 >
-                                    <MessageCircle className="w-4 h-4 fill-white" />
-                                    Instant Chat on WhatsApp (+91 9953894014)
-                                </a>
+                                    <FileText className="w-4 h-4 text-cyan-300" />
+                                    Submit Formal RFQ / Quote Request
+                                </Link>
                             </div>
                         </div>
 
@@ -253,9 +263,9 @@ export default function ContactPage() {
                                     >
                                         <option value="Product Price & Quotation Inquiry">Product Price & Quotation Inquiry</option>
                                         <option value="Bulk Order / B2B Tender Procurement">Bulk Order / B2B Tender Procurement</option>
-                                        <option value="Structured Cabling & Installation Support">Structured Cabling & Installation Support</option>
+                                        <option value="Structured Cabling & Hardware Supply">Structured Cabling & Hardware Supply</option>
                                         <option value="CCTV & Surveillance System Design">CCTV & Surveillance System Design</option>
-                                        <option value="EPABX / Intercom Telephony Solutions">EPABX / Intercom Telephony Solutions</option>
+                                        <option value="Enterprise Wi-Fi & Fiber Networking">Enterprise Wi-Fi & Fiber Networking</option>
                                         <option value="Dealership / Vendor Collaboration">Dealership / Vendor Collaboration</option>
                                     </select>
                                 </div>

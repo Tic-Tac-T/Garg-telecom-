@@ -14,8 +14,8 @@ export default function FeaturedProducts() {
         { id: 'network-switches', label: 'Network Switches' },
         { id: 'cctv-cameras', label: 'CCTV Cameras' },
         { id: 'routers-wifi', label: 'Routers & Wi-Fi' },
-        { id: 'network-cables', label: 'Cables & Fiber' },
-        { id: 'intercom-telecom', label: 'Intercom & EPABX' }
+        { id: 'surveillance-storage', label: 'Surveillance HDDs' },
+        { id: 'network-cables', label: 'Cables & Fiber' }
     ];
 
     const filtered = selectedTab === 'all'
@@ -44,7 +44,7 @@ export default function FeaturedProducts() {
                         href="/products"
                         className="mt-4 md:mt-0 inline-flex items-center gap-1.5 text-sm font-bold text-blue-600 hover:text-blue-800 transition"
                     >
-                        View Full 25+ Equipment Catalog <ArrowRight className="w-4 h-4" />
+                        Browse All Equipment <ArrowRight className="w-4 h-4" />
                     </Link>
                 </div>
 
@@ -67,7 +67,7 @@ export default function FeaturedProducts() {
 
                 {/* Product Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                    {filtered.slice(0, 8).map((product) => (
+                    {filtered.map((product) => (
                         <ProductCard key={product.id} product={product} />
                     ))}
                 </div>

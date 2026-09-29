@@ -16,12 +16,14 @@ export default function QuoteDrawer() {
             <div className="relative w-full max-w-md bg-white h-full shadow-2xl flex flex-col justify-between border-l border-slate-200">
                 {/* Header */}
                 <div className="px-5 py-4 border-b border-slate-200 bg-slate-900 text-white flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                        <FileCheck2 className="w-5 h-5 text-blue-400" />
+                    <div className="flex items-center gap-3">
+                        <div className="bg-white p-1 rounded-lg shadow-xs">
+                            <img src="/garg-telecom-icon.png" alt="GT" className="h-7 w-auto object-contain" />
+                        </div>
                         <div>
-                            <h3 className="font-bold text-sm sm:text-base text-white">Quotation / RFQ Cart</h3>
+                            <h3 className="font-bold text-sm sm:text-base text-white">B2B Quotation / RFQ Cart</h3>
                             <p className="text-[11px] text-slate-300">
-                                {totalItems} {totalItems === 1 ? 'item' : 'items'} selected for B2B quote
+                                Garg Telecom Pvt. Ltd. • {totalItems} {totalItems === 1 ? 'item' : 'items'} selected
                             </p>
                         </div>
                     </div>
@@ -40,7 +42,7 @@ export default function QuoteDrawer() {
                             <ShoppingBag className="w-12 h-12 text-slate-300 mx-auto mb-3" />
                             <h4 className="text-base font-semibold text-slate-700">Your Quote Cart is Empty</h4>
                             <p className="text-xs text-slate-500 mt-1 max-w-xs mx-auto">
-                                Browse our network switches, CCTV cameras, CAT6 cables, and EPABX systems to add items to your quotation request.
+                                Browse our network switches, CCTV cameras, CAT6 cables, and enterprise Wi-Fi routers to add items to your quotation request.
                             </p>
                             <Link
                                 href="/products"
@@ -53,10 +55,18 @@ export default function QuoteDrawer() {
                     ) : (
                         items.map((item) => (
                             <div key={item.product.id} className="pt-3 first:pt-0 flex items-start justify-between gap-3">
-                                <div className="w-12 h-12 rounded-lg bg-slate-100 border border-slate-200 flex items-center justify-center p-1 flex-shrink-0">
-                                    <span className="text-[10px] font-bold text-slate-700 font-mono">
-                                        {item.product.brand.slice(0, 3)}
-                                    </span>
+                                <div className="w-12 h-12 rounded-lg bg-slate-100 border border-slate-200 flex items-center justify-center p-0.5 flex-shrink-0 overflow-hidden">
+                                    {item.product.imageUrl ? (
+                                        <img
+                                            src={item.product.imageUrl}
+                                            alt={item.product.name}
+                                            className="w-full h-full object-cover rounded"
+                                        />
+                                    ) : (
+                                        <span className="text-[10px] font-bold text-slate-700 font-mono">
+                                            {item.product.brand.slice(0, 3)}
+                                        </span>
+                                    )}
                                 </div>
                                 <div className="flex-1 min-w-0">
                                     <div className="flex items-center gap-1.5">

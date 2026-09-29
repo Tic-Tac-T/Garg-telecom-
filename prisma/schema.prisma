@@ -161,3 +161,20 @@ model Store {
     Order   Order[]
     user    User      @relation(fields: [userId], references: [id])
 }
+
+// Model for Certificate Verification System
+model Certificate {
+    id                    String   @id @default(cuid())
+    certificateId         String   @unique
+    recipientName         String
+    certificateTitle      String   @default("Internship Completion Certificate")
+    trainingName          String   @default("Full Stack Web Development")
+    role                  String   @default("Full Stack Web Development Intern")
+    organization          String   @default("Garg Telecom Pvt. Ltd.")
+    issueDate             String
+    status                String   @default("Verified")
+    verificationTokenHash String   @unique
+    certificateImageUrl   String?
+    createdAt             DateTime @default(now())
+    updatedAt             DateTime @updatedAt
+}

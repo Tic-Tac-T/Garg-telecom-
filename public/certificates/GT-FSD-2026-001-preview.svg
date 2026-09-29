@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="850" viewBox="0 0 1200 850" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="850" fill="#FFFFFF"/>
+  <rect x="20" y="20" width="1160" height="810" rx="4" fill="#FAFCFF" stroke="#1E3A8A" stroke-width="4"/>
+  <rect x="32" y="32" width="1136" height="786" rx="2" fill="none" stroke="#D4AF37" stroke-width="2"/>
+  <rect x="40" y="40" width="1120" height="770" fill="none" stroke="#93C5FD" stroke-width="1" stroke-dasharray="6 4"/>
+
+  <!-- Corner Ornaments -->
+  <path d="M 45 65 L 45 45 L 65 45" stroke="#D4AF37" stroke-width="3" fill="none"/>
+  <path d="M 1155 65 L 1155 45 L 1135 45" stroke="#D4AF37" stroke-width="3" fill="none"/>
+  <path d="M 45 785 L 45 805 L 65 805" stroke="#D4AF37" stroke-width="3" fill="none"/>
+  <path d="M 1155 785 L 1155 805 L 1135 805" stroke="#D4AF37" stroke-width="3" fill="none"/>
+
+  <!-- Header Branding -->
+  <text x="600" y="110" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="900" fill="#0F172A" text-anchor="middle" letter-spacing="4">GARG TELECOM PVT. LTD.</text>
+  <text x="600" y="132" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="600" fill="#64748B" text-anchor="middle" letter-spacing="2">GOVT. APPROVED ENTERPRISE TELECOM &amp; DIGITAL INFRASTRUCTURE • NEW DELHI</text>
+  
+  <line x1="450" y1="150" x2="750" y2="150" stroke="#D4AF37" stroke-width="2"/>
+  <circle cx="600" cy="150" r="4" fill="#D4AF37"/>
+
+  <!-- Title -->
+  <text x="600" y="210" font-family="'Times New Roman', Times, serif" font-size="38" font-weight="bold" fill="#1E3A8A" text-anchor="middle" letter-spacing="3">CERTIFICATE OF COMPLETION</text>
+  
+  <!-- Subtitle -->
+  <text x="600" y="260" font-family="'Times New Roman', Times, serif" font-size="16" font-style="italic" fill="#475569" text-anchor="middle">This is proudly presented to</text>
+
+  <!-- Recipient Name -->
+  <text x="600" y="330" font-family="'Times New Roman', Times, serif" font-size="52" font-weight="bold" fill="#0F172A" text-anchor="middle" letter-spacing="1">Hardik Bindal</text>
+  <line x1="320" y1="355" x2="880" y2="355" stroke="#CBD5E1" stroke-width="1.5"/>
+
+  <!-- Body Content -->
+  <text x="600" y="405" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#334155" text-anchor="middle">for successfully completing the rigorous professional training and internship program as</text>
+  
+  <!-- Role & Course -->
+  <text x="600" y="445" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="bold" fill="#0284C7" text-anchor="middle">Full Stack Developer Intern</text>
+  <text x="600" y="475" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="600" fill="#1E293B" text-anchor="middle">Full Stack Web Development</text>
+  
+  <text x="600" y="525" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#475569" text-anchor="middle">
+    demonstrating exceptional technical competence in modern full-stack web engineering, system architecture,
+  </text>
+  <text x="600" y="548" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#475569" text-anchor="middle">
+    and contributing substantially to the development and enhancement of the company's enterprise digital platform.
+  </text>
+
+  <!-- Certificate ID & Date Badge -->
+  <rect x="180" y="585" width="240" height="34" rx="6" fill="#F1F5F9" stroke="#E2E8F0"/>
+  <text x="300" y="607" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#334155" text-anchor="middle">ID: GT-FSD-2026-001</text>
+
+  <rect x="780" y="585" width="240" height="34" rx="6" fill="#F1F5F9" stroke="#E2E8F0"/>
+  <text x="900" y="607" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#334155" text-anchor="middle">DATE: August 15, 2026</text>
+
+  <!-- Signatures Section -->
+  <line x1="160" y1="715" x2="380" y2="715" stroke="#64748B" stroke-width="1.5"/>
+  <text x="270" y="738" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#0F172A" text-anchor="middle">Sanjeev Kumar Bansal</text>
+  <text x="270" y="756" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#64748B" text-anchor="middle">Managing Director</text>
+  <text x="270" y="772" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="bold" fill="#1E3A8A" text-anchor="middle">Garg Telecom Pvt. Ltd.</text>
+
+  <!-- Official Seal in Center -->
+  <g transform="translate(600, 715)">
+    <circle cx="0" cy="0" r="50" fill="#FEF3C7" stroke="#D4AF37" stroke-width="3"/>
+    <circle cx="0" cy="0" r="44" fill="none" stroke="#D4AF37" stroke-width="1" stroke-dasharray="4 2"/>
+    <text x="0" y="-12" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="bold" fill="#92400E" text-anchor="middle" letter-spacing="1">GARG TELECOM</text>
+    <path d="M -15 2 L -5 12 L 15 -8" stroke="#16A34A" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="0" y="24" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="bold" fill="#92400E" text-anchor="middle" letter-spacing="1">OFFICIAL SEAL</text>
+    <text x="0" y="34" font-family="Arial, Helvetica, sans-serif" font-size="8" fill="#B45309" text-anchor="middle">VERIFIED</text>
+  </g>
+
+  <!-- QR Code Section on Right -->
+  <g transform="translate(970, 700)">
+    <image href="data:image/png;base64,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B1NXcso8+KSu5LuZB091JZN5cKorecI82OlKJvPgVFdyyjw41ZXsmAdTVzItREQusRARucRCROQSCxGRS7z4QlcymQc7XclkHuyYB1NXsmMenOpKpq5kMg9OdSWnzIOdrmQyD3a6kp9kHux0JU90JU+ZB1NXMpkHO13J1JXsmAdTV/LTzIMnupId8+CJruSUefDEQkTkEgsRkUssREQusRARucRCROQSv37/wYZ58ERXsmMenOpKnjAPpq5kxzw41ZXcwjzY6Up+mnlwqiuZzIMnupJ3MA/eoSuZzIN/VVcymQc7XcmJhYjIJRYiIpdYiIhcYiEicokXX+hKJvNgpyuZzINTXcmOeXCqKzlhHjxlHkxdyY55cKormcyDna5kMg9OmQdPdCU75sHUlZzqSt6hK5nMg52u5JR5MHUl72AeTF3JO5gHO13JZB58ykJE5BILEZFLLERELrEQEbnEQkTkEi/+AebBTldyyjyYupInzIOnupLJPHjKPJi6ksk82OlK3qErmcyDU+bBE13Jqa7kk8yDqSs51ZVM5sE7dCU75sHUlXzKQkTkEgsRkUssREQusRARucSLL5gHP808mLqSna5kMg9OdSXvYB6cMg+mrmTHPDjRlTxlHkxdyY55MHUlO+bBqa7khHmw05X8tK5kMg9OdSVTV7JjHjxhHrxDV/LEQkTkEgsRkUssREQusRARucSv339wyDw41ZX8NPPgVFcymQenupJT5sFOVzKZBztdyWQeTF3JTcyDd+hKJvPgqa5kMg92upLvZh7sdCWTebDTlUzmwamuZMc8eKIrmRYiIpdYiIhcYiEicomFiMglFiIil3jxF7qSU+bBTldyyjyYupId82DqSibz4F9lHkxdyY55MHUlp8yDf1FXcso8mLqSHfPgVFfyRFeyYx5MXckp8+CUeXDKPPhpXcmJhYjIJRYiIpdYiIhcYiEicolfv//gf8A8+G5dySnzYKcrOWUeTF3JKfPgU7qSp8yDqSs5ZR480ZW8g3nwVFcymQdTV7JjHkxdyVPmwamuZDIPTnUl00JE5BILEZFLLERELrEQEbnEQkTkEi++YB78i7qSU13JKfPglHlwyjyYupKdruS7dSU75sHUleyYB6fMg6krOWUenOpKJvNgpyt5wjzY6UqmrmTHPPgXmQdTV3KqK3mqKzmxEBG5xEJE5BILEZFLLERELvHiL3Qln2QenOpKJvNg6kp2upJ/kXmw05VMXclkHux0Je/QlTzRleyYBye6kqfMg1PmwdSV7HQlp8yDE+bBU13JE+bBTlcydSVPLERELrEQEbnEQkTkEgsRkUssREQu8eIbmAdPdCWfYh7sdCWnupJT5sE7mAcnupId82DqSk6ZB5/UlZwwD3a6knfoSibz4Kmu5AnzYDIPfpp5sNOVnFiIiFxiISJyiYWIyCUWIiKXePE/YR58N/PgVFey05U80ZXsmAdTVzKZB+/QlTxlHkzmwTuYB1NXstOV/DTzYOpKnuhKTpkHp7qSHfPglHkwdSXTQkTkEgsRkUssREQusRARucRCROQSL/7HupJT5sET5sGprmTHPJi6kp2uZDIPpq5kxzx4wjx4qiuZzINTXclkHux0JZ/SlbyDeXCqKzllHkxdyVNdySnz4MRCROQSCxGRSyxERC6xEBG5xItv0JX8tK5kMg/eoSuZzIOdrmQyD3a6klPmwdSVTObBO3QlO+bB1JXsmAenupLJPJi6klPmwVNdySnzYOpKnuhKTpkHp8yDna7klHlwqis5sRARucRCROQSCxGRSyxERC6xEBG5xIu/YB78X3Ulk3mwYx5MXcmOeXDKPJi6kp2uZDIPpq7kJl3JjnnwhHkwdSU75sHUleyYB6e6ksk82OlKpq5kMg92upKpKzllHpwyDz5lISJyiYWIyCUWIiKXWIiIXOLX7z8QEbnAQkTkEgsRkUssREQusRARucR/8vkcFZJPbsYAAAAASUVORK5CYII=" x="-50" y="-50" width="100" height="100" />
+    <rect x="-52" y="-52" width="104" height="104" fill="none" stroke="#CBD5E1" stroke-width="1" rx="4"/>
+    <text x="0" y="66" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="bold" fill="#0F172A" text-anchor="middle" letter-spacing="1">SCAN TO VERIFY</text>
+    <text x="0" y="80" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="600" fill="#64748B" text-anchor="middle">GT-FSD-2026-001</text>
+  </g>
+</svg>

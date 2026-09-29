@@ -31,16 +31,6 @@ export default function SolutionDetailPage({ params }) {
 
     const otherSolutions = SOLUTIONS.filter((s) => s.id !== solution.id).slice(0, 3);
 
-    const handleWhatsAppQuote = () => {
-        const text = `*Solution Quotation Request - Garg Telecom*%0A` +
-            `*Solution:* ${solution.title}%0A` +
-            `*Category:* ${solution.category}%0A` +
-            `----------------------------------%0A` +
-            `Hello Sanjeev ji, we want to implement the "${solution.title}" at our site. Please share an itemized Bill of Materials quote and technician coordination options.`;
-
-        window.open(`https://wa.me/${COMPANY_INFO.contact.phoneRaw.replace(/[^0-9]/g, '')}?text=${text}`, '_blank');
-    };
-
     return (
         <div className="bg-slate-50 min-h-screen py-8 sm:py-12">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -80,13 +70,13 @@ export default function SolutionDetailPage({ params }) {
                             >
                                 <FileText className="w-4 h-4" /> Request Solution BOM Quote
                             </Link>
-                            <button
-                                onClick={handleWhatsAppQuote}
-                                className="px-5 py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs sm:text-sm rounded-xl transition shadow-md flex items-center gap-2"
+                            <Link
+                                href="/contact"
+                                className="px-5 py-3 bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs sm:text-sm rounded-xl transition border border-slate-700 shadow-md flex items-center gap-2"
                             >
-                                <MessageCircle className="w-4 h-4 fill-white" />
-                                Inquire on WhatsApp
-                            </button>
+                                <Phone className="w-4 h-4 text-blue-400" />
+                                Speak With Solution Engineer
+                            </Link>
                         </div>
                     </div>
                 </div>

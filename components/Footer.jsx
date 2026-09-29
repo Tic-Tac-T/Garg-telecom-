@@ -8,7 +8,7 @@ import {
     Phone,
     Mail,
     Clock,
-    MessageCircle,
+    FileText,
     ShieldCheck,
     ChevronRight,
     Building2,
@@ -73,44 +73,38 @@ export default function Footer() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
                     {/* Column 1: Company Profile */}
                     <div className="lg:col-span-2 space-y-4">
-                        <Link href="/" className="flex items-center gap-3">
-                            <div className="w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center text-white shadow-md">
-                                <Network className="w-6 h-6 text-white" />
-                            </div>
-                            <div>
-                                <span className="text-xl font-black tracking-tight text-white">
-                                    GARG <span className="text-blue-400">TELECOM</span>
-                                </span>
-                                <span className="block text-[10px] text-slate-400">
-                                    Telecom, Networking & Surveillance Solutions
-                                </span>
-                            </div>
+                        <Link href="/" className="inline-block bg-white p-2.5 rounded-xl shadow-md border border-slate-700/50 hover:bg-slate-50 transition">
+                            <img
+                                src="/garg-telecom-logo.png"
+                                alt="Garg Telecom Pvt. Ltd. - Telecommunications & Digital Solutions"
+                                className="h-10 w-auto object-contain"
+                            />
                         </Link>
 
                         <p className="text-xs text-slate-400 leading-relaxed pr-4">
-                            {COMPANY_INFO.tagline} Established dealership in Karol Bagh, New Delhi, supplying high-performance Wi-Fi routers, Gigabit switches, CCTV security cameras, NVR/DVR systems, structured CAT6 copper cabling, and EPABX intercom solutions to homes, offices, schools, and enterprise businesses.
+                            <strong className="text-white">Garg Telecom Pvt. Ltd.</strong> is a certified telecommunications and digital infrastructure enterprise based in Karol Bagh, New Delhi. Supplying enterprise Wi-Fi routers, core Gigabit switches, high-resolution CCTV security, optical fiber networking, structured Cat6 cabling, and high-density Wi-Fi systems to businesses, corporate offices, institutions, and government facilities pan-India.
                         </p>
 
-                        <div className="p-3 bg-slate-900/80 rounded-xl border border-slate-800 text-xs space-y-1">
-                            <p className="font-semibold text-white">
-                                Proprietor: <span className="text-blue-400">{COMPANY_INFO.owner}</span>
-                            </p>
-                            <p className="text-slate-400">
-                                Specializing in B2B IT procurement, government/corporate billing, and turnkey telecom supply.
-                            </p>
+                        <div className="p-3.5 bg-slate-900/90 rounded-xl border border-slate-800 text-xs space-y-2">
+                            <div className="flex items-center justify-between text-xs">
+                                <span className="text-slate-400">Managing Director:</span>
+                                <span className="text-blue-400 font-semibold">{COMPANY_INFO.owner}</span>
+                            </div>
+                            <div className="flex items-center justify-between text-xs pt-1.5 border-t border-slate-800">
+                                <span className="text-slate-400">Business Location:</span>
+                                <span className="text-slate-200 font-medium">Karol Bagh, New Delhi</span>
+                            </div>
                         </div>
 
-                        {/* Direct WhatsApp Callout */}
+                        {/* Direct Quote Portal Callout */}
                         <div>
-                            <a
-                                href={COMPANY_INFO.contact.whatsappUrl}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-flex items-center gap-2 bg-emerald-600/90 hover:bg-emerald-600 text-white text-xs font-semibold px-4 py-2.5 rounded-xl transition shadow-md"
+                            <Link
+                                href="/quote"
+                                className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold px-4 py-2.5 rounded-xl transition shadow-md"
                             >
-                                <MessageCircle className="w-4 h-4 fill-white" />
-                                Chat on WhatsApp: {COMPANY_INFO.contact.phone}
-                            </a>
+                                <FileText className="w-4 h-4 text-cyan-300" />
+                                Instant Quote Portal (RFQ)
+                            </Link>
                         </div>
                     </div>
 
@@ -175,7 +169,7 @@ export default function Footer() {
                                     className="text-slate-400 hover:text-blue-400 transition flex items-center gap-1.5"
                                 >
                                     <ChevronRight className="w-3 h-3 text-slate-600" />
-                                    Installation Assistance (Delhi-NCR)
+                                    B2B Hardware Distribution
                                 </Link>
                             </li>
                             <li>
@@ -259,9 +253,9 @@ export default function Footer() {
             <div className="border-t border-slate-900 bg-slate-950 py-6">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500">
                     <div>
-                        <p>© {new Date().getFullYear()} Garg Telecom. All Rights Reserved. Products from leading networking and surveillance brands.</p>
-                        <p className="text-[11px] text-slate-600 mt-0.5">
-                            Proprietor: Sanjeev Kumar Bansal | Karol Bagh, New Delhi, Delhi - 110007
+                        <p>© {new Date().getFullYear()} Garg Telecom Pvt. Ltd. All Rights Reserved. Telecommunications & Digital Solutions.</p>
+                        <p className="text-[11px] text-slate-500 mt-0.5">
+                            Regd. Office: {COMPANY_INFO.address.fullAddress}
                         </p>
                     </div>
 

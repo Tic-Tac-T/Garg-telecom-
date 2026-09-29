@@ -1,6 +1,6 @@
-# Contributing to Marketo
+# Contributing to Garg Telecom Platform
 
-Thank you for considering contributing to **Marketo**!
+Thank you for considering contributing to **Garg Telecom Pvt. Ltd.**!
 We welcome contributions from everyone, whether it's fixing a bug, adding a new feature, or optimizing the codebase.
 
 ---

@@ -6,11 +6,15 @@ const StoreNavbar = () => {
 
     return (
         <div className="flex items-center justify-between px-12 py-3 border-b border-slate-200 transition-all">
-            <Link href="/" className="relative text-4xl font-semibold text-slate-700">
-                Marketo<span className="text-green-600 text-5xl leading-0">.</span>
-                <p className="absolute text-xs font-semibold -top-1 -right-11 px-3 p-0.5 rounded-full flex items-center gap-2 text-white bg-green-500">
-                    Store
-                </p>
+            <Link href="/" className="flex items-center gap-3">
+                <img 
+                    src="/garg-telecom-logo.png" 
+                    alt="Garg Telecom Pvt. Ltd." 
+                    className="h-10 w-auto object-contain" 
+                />
+                <span className="text-xs font-bold uppercase tracking-wider text-blue-700 bg-blue-50 border border-blue-200 px-2.5 py-1 rounded-full">
+                    Vendor Portal
+                </span>
             </Link>
             <div className="flex items-center gap-3">
                 <p>Hi, Seller</p>

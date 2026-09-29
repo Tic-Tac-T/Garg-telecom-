@@ -81,18 +81,12 @@ export default function Navbar() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex items-center justify-between h-20">
                         {/* Left: Brand Logo & Identity */}
-                        <Link href="/" className="flex items-center gap-3 group">
-                            <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-blue-900 via-blue-800 to-slate-950 flex items-center justify-center text-white shadow-md shadow-blue-950/20 group-hover:scale-105 transition-transform duration-200 border border-blue-700/30">
-                                <Network className="w-6 h-6 text-cyan-400" />
-                            </div>
-                            <div className="flex flex-col">
-                                <span className="text-xl sm:text-2xl font-black tracking-tight text-slate-900 group-hover:text-blue-900 transition-colors">
-                                    GARG <span className="text-blue-600">TELECOM</span>
-                                </span>
-                                <span className="text-[10px] sm:text-[11px] font-medium text-slate-500 tracking-tight leading-none hidden sm:block">
-                                    Telecom, Networking & Surveillance Solutions
-                                </span>
-                            </div>
+                        <Link href="/" className="flex items-center gap-3 group py-1">
+                            <img
+                                src="/garg-telecom-logo.png"
+                                alt="Garg Telecom Pvt. Ltd. - Telecommunications & Digital Solutions"
+                                className="h-10 sm:h-12 w-auto object-contain transition-transform duration-200 group-hover:scale-[1.02]"
+                            />
                         </Link>
 
                         {/* Desktop Navigation Links */}
@@ -191,18 +185,6 @@ export default function Navbar() {
                                 <Phone className="w-5 h-5" />
                             </a>
 
-                            {/* WhatsApp Direct Chat */}
-                            <a
-                                href={COMPANY_INFO.contact.whatsappUrl}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                aria-label="Chat on WhatsApp"
-                                className="p-2 text-emerald-600 hover:text-emerald-700 hover:bg-emerald-50 rounded-full transition hidden sm:inline-flex"
-                                title="Chat with Karol Bagh sales team"
-                            >
-                                <MessageCircle className="w-5 h-5 fill-emerald-500 text-emerald-500" />
-                            </a>
-
                             {/* Quote Cart / RFQ List Button */}
                             <button
                                 onClick={() => setIsCartOpen(true)}
@@ -276,19 +258,18 @@ export default function Navbar() {
                                     <Phone className="w-3.5 h-3.5 text-blue-600" />
                                     Call Now
                                 </a>
-                                <a
-                                    href={COMPANY_INFO.contact.whatsappUrl}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="flex items-center justify-center gap-1.5 py-2 px-3 bg-emerald-50 border border-emerald-300 text-emerald-800 rounded-lg font-semibold"
+                                <Link
+                                    href="/quote"
+                                    onClick={() => setMobileMenuOpen(false)}
+                                    className="flex items-center justify-center gap-1.5 py-2 px-3 bg-blue-50 border border-blue-300 text-blue-800 rounded-lg font-semibold"
                                 >
-                                    <MessageCircle className="w-3.5 h-3.5 text-emerald-600 fill-emerald-600" />
-                                    WhatsApp
-                                </a>
+                                    <FileText className="w-3.5 h-3.5 text-blue-600" />
+                                    RFQ Portal
+                                </Link>
                             </div>
 
-                            <p className="text-[11px] text-slate-500 text-center pt-1">
-                                📍 Karol Bagh, New Delhi - 110007 | Proprietor: Sanjeev Kumar Bansal
+                            <p className="text-[11px] text-slate-500 text-center pt-1 font-medium">
+                                📍 Karol Bagh, New Delhi - 110007 | Garg Telecom Pvt. Ltd.
                             </p>
                         </div>
                     </div>

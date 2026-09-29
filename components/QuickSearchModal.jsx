@@ -40,7 +40,7 @@ export default function QuickSearchModal({ isOpen, onClose }) {
         "Hikvision camera",
         "WiFi 6 router",
         "PoE switch",
-        "EPABX intercom",
+        "Access Point",
         "9U rack",
         "WD Purple HDD"
     ];
@@ -56,7 +56,7 @@ export default function QuickSearchModal({ isOpen, onClose }) {
                         type="text"
                         value={searchTerm}
                         onChange={(e) => setSearchTerm(e.target.value)}
-                        placeholder="Search products by model, brand, switch, CCTV, CAT6 cable, EPABX..."
+                        placeholder="Search products by model, brand, switch, CCTV, CAT6 cable, router..."
                         className="w-full text-slate-800 placeholder-slate-400 bg-transparent text-base sm:text-lg focus:outline-none"
                     />
                     {searchTerm && (
@@ -115,10 +115,18 @@ export default function QuickSearchModal({ isOpen, onClose }) {
                                 className="pt-2.5 first:pt-0 flex items-center justify-between gap-4 p-2 rounded-xl hover:bg-blue-50/50 transition group"
                             >
                                 <div className="flex items-center gap-3.5 min-w-0">
-                                    <div className="w-12 h-12 rounded-lg bg-slate-100 flex items-center justify-center p-1.5 flex-shrink-0 border border-slate-200 group-hover:border-blue-200">
-                                        <div className="w-8 h-8 rounded bg-gradient-to-br from-blue-900 to-slate-900 text-white font-bold text-xs flex items-center justify-center shadow-xs">
-                                            {product.brand.slice(0, 2).toUpperCase()}
-                                        </div>
+                                    <div className="w-12 h-12 rounded-lg bg-slate-100 flex items-center justify-center p-0.5 flex-shrink-0 border border-slate-200 group-hover:border-blue-200 overflow-hidden">
+                                        {product.imageUrl ? (
+                                            <img
+                                                src={product.imageUrl}
+                                                alt={product.name}
+                                                className="w-full h-full object-cover rounded"
+                                            />
+                                        ) : (
+                                            <div className="w-8 h-8 rounded bg-gradient-to-br from-blue-900 to-slate-900 text-white font-bold text-xs flex items-center justify-center shadow-xs">
+                                                {product.brand.slice(0, 2).toUpperCase()}
+                                            </div>
+                                        )}
                                     </div>
                                     <div className="min-w-0">
                                         <div className="flex items-center gap-2 flex-wrap">

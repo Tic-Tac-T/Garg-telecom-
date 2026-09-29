@@ -51,8 +51,8 @@ export default function CreateStore() {
                     <form onSubmit={e => toast.promise(onSubmitHandler(e), { loading: "Submitting data..." })} className="max-w-7xl mx-auto flex flex-col items-start gap-3 text-slate-500">
                         {/* Title */}
                         <div>
-                            <h1 className="text-3xl ">Add Your <span className="text-slate-800 font-medium">Store</span></h1>
-                            <p className="max-w-lg">To become a seller on Marketo, submit your store details for review. Your store will be activated after admin verification.</p>
+                            <h1 className="text-3xl ">Register As An Authorized <span className="text-slate-800 font-medium">Partner</span></h1>
+                            <p className="max-w-lg">To become an authorized hardware vendor or system integrator partner with Garg Telecom Pvt. Ltd., submit your firm details for onboarding verification.</p>
                         </div>
 
                         <label className="mt-10 cursor-pointer">

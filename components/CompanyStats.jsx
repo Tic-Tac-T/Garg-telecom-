@@ -10,7 +10,7 @@ export default function CompanyStats() {
             icon: <PackageCheck className="w-8 h-8 text-cyan-400" />,
             value: "500+",
             label: "Products in Catalog",
-            desc: "Routers, Switches, CCTV, Cables & PBX"
+            desc: "Routers, Switches, CCTV, Cables & Accessories"
         },
         {
             icon: <Layers className="w-8 h-8 text-blue-400" />,
@@ -28,7 +28,7 @@ export default function CompanyStats() {
             icon: <Zap className="w-8 h-8 text-amber-400" />,
             value: "< 2 hrs",
             label: "Fast RFQ Turnaround",
-            desc: "Itemized Quotes & WhatsApp Support"
+            desc: "Itemized Quotes & Fast B2B Support"
         }
     ];
 

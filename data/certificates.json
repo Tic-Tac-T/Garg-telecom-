@@ -1,0 +1,40 @@
+[
+  {
+    "certificateId": "GT-FSWD-2026-847291",
+    "recipientName": "Hardik Bindal",
+    "certificateTitle": "Certificate of Completion",
+    "trainingName": "Full Stack Web Development",
+    "course": "Full Stack Web Development",
+    "role": "Full Stack Developer Intern",
+    "internshipRole": "Full Stack Developer Intern",
+    "organization": "Garg Telecom Pvt. Ltd.",
+    "period": "15th June 2026 to 15th July 2026",
+    "issueDate": "July 15, 2026",
+    "verificationTokenHash": "3529ca757ee534742fb1ac813a7f6eff58cd8644fc27d1a3b80cb69c34cb89d0",
+    "verificationTokenHashes": [
+      "3529ca757ee534742fb1ac813a7f6eff58cd8644fc27d1a3b80cb69c34cb89d0",
+      "80da7af4d271c3c0c9bb41803fc03584963b7115138f6553f08844d0010508e9"
+    ],
+    "status": "Verified",
+    "description": "Successfully completed Full Stack Web Development internship at Garg Telecom Pvt. Ltd. from 15th June 2026 to 15th July 2026, building and deploying the company's enterprise web platform and digital customer portal.",
+    "contributions": [
+      "Designed and developed the Garg Telecom business website from scratch.",
+      "Converted the company's offline business presence into a functional online web platform.",
+      "Developed responsive frontend pages for desktop, tablet, and mobile devices.",
+      "Created the website's main user interface and structured the layout for company information, products/services, pricing, and customer interaction.",
+      "Implemented reusable frontend components and maintained a consistent design system throughout the website.",
+      "Developed and integrated backend functionality required by the website.",
+      "Connected frontend components with backend APIs where required.",
+      "Worked on structured handling of business data and website content.",
+      "Implemented product/service listing functionality so customers could view relevant company offerings and pricing information online.",
+      "Improved website navigation and user experience for easier access to company services.",
+      "Added responsive styling and optimized the site for different screen sizes.",
+      "Worked on form handling and customer enquiry/contact functionality where applicable.",
+      "Performed testing and debugging of frontend and backend functionality.",
+      "Fixed UI, routing, responsiveness, and integration issues during development."
+    ],
+    "certificateImageUrl": "/certificates/hardik-bindal-certificate.jpg",
+    "certificateImage": "/certificates/hardik-bindal-certificate.jpg",
+    "createdAt": "2026-07-15T10:00:00.000Z"
+  }
+]

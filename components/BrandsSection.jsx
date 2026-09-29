@@ -5,6 +5,8 @@ import Link from 'next/link';
 import { ArrowRight, ShieldCheck } from 'lucide-react';
 import { BRANDS } from '@/data/brands';
 
+import BrandLogoBadge from '@/components/BrandLogoBadge';
+
 export default function BrandsSection() {
     return (
         <section className="py-16 sm:py-24 bg-slate-50 border-b border-slate-200">
@@ -39,8 +41,8 @@ export default function BrandsSection() {
                             href={`/products?brand=${encodeURIComponent(brand.name)}`}
                             className="bg-white rounded-2xl border border-slate-200 hover:border-blue-400 p-5 shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center justify-between group"
                         >
-                            <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-slate-900 to-blue-950 text-white flex items-center justify-center font-black text-base shadow-sm group-hover:scale-105 transition-transform duration-300 mb-3 border border-slate-700/30">
-                                {brand.name.slice(0, 2).toUpperCase()}
+                            <div className="w-full mb-3">
+                                <BrandLogoBadge brandId={brand.id} name={brand.name} accentColor={brand.accentColor} />
                             </div>
 
                             <h3 className="text-sm font-bold text-slate-900 group-hover:text-blue-600 transition">
@@ -51,7 +53,7 @@ export default function BrandsSection() {
                                 {brand.tagline}
                             </p>
 
-                            <span className="mt-3 text-[10px] font-semibold text-blue-600 bg-blue-50 px-2 py-0.5 rounded-full group-hover:bg-blue-600 group-hover:text-white transition">
+                            <span className="mt-3 text-[10px] font-semibold text-blue-600 bg-blue-50 px-2.5 py-1 rounded-full group-hover:bg-blue-600 group-hover:text-white transition">
                                 View Products →
                             </span>
                         </Link>
@@ -61,7 +63,7 @@ export default function BrandsSection() {
                 {/* Brand Disclaimer Notice */}
                 <div className="mt-8 text-center text-xs text-slate-500">
                     <p>
-                        All brand names, trademarks, and logos belong to their respective manufacturers. Garg Telecom supplies genuine products sourced from verified distribution channels.
+                        All brand names, trademarks, and logos belong to their respective manufacturers. Garg Telecom Pvt. Ltd. supplies genuine products sourced from verified distribution channels.
                     </p>
                 </div>
             </div>
